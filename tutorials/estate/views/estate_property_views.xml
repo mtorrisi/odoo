@@ -25,14 +25,22 @@
       <field name="arch" type="xml">
           <form string="Property">
               <sheet>
+                <group>
+                    <field name="name" placeholder="Property Name" required="1"/>
+                    <field name="description" placeholder="Description" />
+                    <!-- <field name="selling_price" placeholder="Price" required="1"/> -->
+                </group>
+                <group>
                   <group>
-                      <field name="name" placeholder="Property Name" required="1"/>
-                      <field name="description" placeholder="Description" />
-                      <!-- <field name="selling_price" placeholder="Price" required="1"/> -->
+                    <field name="postcode" />
+                    <field name="expected_price" required="true" />
+                    <field name="bedrooms" />
                   </group>
                   <group>
-                    <field name="postcode" placeholder="Description" />
+                    <field name="date_availability" />
+                    <field name="selling_price" read-only="true" />
                   </group>
+                </group>
               </sheet>
               <footer>
                   <!-- <button string="Save" type="object" name="action_save" class="btn-primary"/>
