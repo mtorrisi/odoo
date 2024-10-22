@@ -1,8 +1,44 @@
 <?xml version="1.0"?>
 <odoo>
-    <record id="estate_propety_action" model="ir.actions.act_window">
-        <field name="name">Test action</field>
+    <record id="estate.action_menu" model="ir.actions.act_window">
+        <field name="name">Properties</field>
         <field name="res_model">estate_property</field>
         <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_estate_property_tree"/>
     </record>
+
+    <record id="view_estate_property_tree" model="ir.ui.view">
+        <field name="name">estate.property.tree</field>
+        <field name="model">estate_property</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="description"/>
+                <field name="selling_price"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_estate_property_form" model="ir.ui.view">
+      <field name="name">estate.property.form</field>
+      <field name="model">estate_property</field>
+      <field name="arch" type="xml">
+          <form string="Property">
+              <sheet>
+                  <group>
+                      <field name="name" placeholder="Property Name" required="1"/>
+                      <field name="description" placeholder="Description" />
+                      <!-- <field name="selling_price" placeholder="Price" required="1"/> -->
+                  </group>
+                  <group>
+                    <field name="postcode" placeholder="Description" />
+                  </group>
+              </sheet>
+              <footer>
+                  <!-- <button string="Save" type="object" name="action_save" class="btn-primary"/>
+                  <button string="Discard" type="object" name="action_discard" class="btn-secondary"/> -->
+              </footer>
+          </form>
+      </field>
+  </record>
 </odoo>
