@@ -6571,7 +6571,7 @@ msgstr "Stel berbagai macam harga tiap produk, diskon otomatis, dll."
 #: code:addons/point_of_sale/static/src/app/screens/product_screen/product_screen.js:0
 #, python-format
 msgid "Set the new discount"
-msgstr ""
+msgstr "Tetapkan diskon baru"
 
 #. module: point_of_sale
 #. odoo-javascript
@@ -8456,6 +8456,8 @@ msgid ""
 "You do not have permission to open a POS session. Please try opening a "
 "session with a different user"
 msgstr ""
+"Anda tidak memiliki izin untuk membuka sesi POS. Silakan coba membuka sesi "
+"dengan user yang berbeda."
 
 #. module: point_of_sale
 #. odoo-python

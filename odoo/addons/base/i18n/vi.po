@@ -5,8 +5,8 @@
 # Translators:
 # Martin Trigaux, 2023
 # Trần Hà <tranthuha13590@gmail.com>, 2023
-# Thi Huong Nguyen, 2024
 # Wil Odoo, 2024
+# Thi Huong Nguyen, 2024
 # 
 msgid ""
 msgstr ""
@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-26 12:42+0000\n"
 "PO-Revision-Date: 2023-10-26 23:09+0000\n"
-"Last-Translator: Wil Odoo, 2024\n"
+"Last-Translator: Thi Huong Nguyen, 2024\n"
 "Language-Team: Vietnamese (https://app.transifex.com/odoo/teams/41243/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1076,6 +1076,10 @@ msgid ""
 "Accounting Asset for India\n"
 "================================\n"
 msgstr ""
+"\n"
+"Tài sản kế toán cho Ấn Độ\n"
+"================================\n"
+"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_au_hr_payroll_account
@@ -1361,6 +1365,8 @@ msgid ""
 "\n"
 "Accounting reports for Bangladesh\n"
 msgstr ""
+"\n"
+"Báo cáo kế toán cho Bangladesh\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_be_reports
@@ -1823,7 +1829,7 @@ msgstr ""
 #: model:ir.module.module,description:base.module_l10n_tr_reports
 msgid ""
 "\n"
-"Accounting reports for Turkey\n"
+"Accounting reports for Türkiye\n"
 msgstr ""
 "\n"
 "Báo cáo kế toán cho Thổ Nhĩ Kỳ\n"
@@ -2300,7 +2306,7 @@ msgid ""
 "Allow clients to Schedule Appointments through the Portal\n"
 msgstr ""
 "\n"
-"Cho phép khách hàng Lên lịch cuộc hẹn thông qua Cổng thông tin\n"
+"Cho phép khách hàng Lên lịch hẹn thông qua Cổng thông tin\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_website_appointment
@@ -2311,7 +2317,7 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"Cho phép khách hàng Lên lịch Cuộc hẹn thông qua Trang web của bạn\n"
+"Cho phép khách hàng Lên lịch hẹn thông qua Trang web của bạn\n"
 "-------------------------------------------------- -----------\n"
 "\n"
 
@@ -2383,7 +2389,7 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"Cho phép tạo lead từ Cuộc hẹn đã Lên lịch thông qua Trang web của bạn\n"
+"Cho phép tạo lead từ Lịch hẹn đã Lên lịch thông qua Trang web của bạn\n"
 "-----------------------------------------------------------------------\n"
 "\n"
 
@@ -4251,6 +4257,12 @@ msgid ""
 "German accounting chart and localization.\n"
 "By default, the audit trail is enabled for GoBD compliance.\n"
 msgstr ""
+"\n"
+"Dieses  Modul beinhaltet einen deutschen Kontenrahmen basierend auf dem SKR03 oder SKR04.\n"
+"=========================================================================================\n"
+"\n"
+"Hệ thống tài khoản và nội địa hóa cho Đức.\n"
+"Theo mặc định, dấu vết kiểm toán được bật để tuân thủ GoBD.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_be_disallowed_expenses
@@ -4827,7 +4839,7 @@ msgid ""
 "country and detailed information like pages browsed by the lead (through a link to website visitor).\n"
 msgstr ""
 "\n"
-"Gia tăng lead được tạo tự động thông qua cuộc hẹn với thông tin khách truy cập trang web được thu thập như ngôn ngữ, \n"
+"Gia tăng lead được tạo tự động thông qua lịch hẹn với thông tin khách truy cập trang web được thu thập như ngôn ngữ, \n"
 "quốc gia và thông tin chi tiết chẳng hạn các trang mà lead đã truy cập (thông qua liên kết đến khách truy cập trang web).\n"
 
 #. module: base
@@ -6028,6 +6040,9 @@ msgid ""
 "Intrastat for Denmark\n"
 "=====================\n"
 msgstr ""
+"\n"
+"Intrastat cho Đan Mạch\n"
+"=====================\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_account_avatax_stock
@@ -6046,7 +6061,7 @@ msgstr ""
 "=======================================\n"
 "Phân hệ này cho phép sử dụng địa chỉ ở cấp độ dòng khi lấy thuế từ Avatax.\n"
 "\n"
-"Hạn chế hiện tại là một dòng đơn hàng duy nhất có nhiều hơn một lần dịch chuyển tồn kho (VD: 10 sản phẩm A, 2 được gửi từ kho số 1 và 8 từ kho số 2). Trong trường hợp này, đơn bán hàng nên được chia thành\n"
+"Hạn chế hiện tại là một dòng đơn hàng duy nhất có nhiều hơn một lần điều chuyển tồn kho (VD: 10 sản phẩm A, 2 được gửi từ kho số 1 và 8 từ kho số 2). Trong trường hợp này, đơn bán hàng nên được chia thành\n"
 "nhiều lần giao hàng.\n"
 
 #. module: base
@@ -6120,7 +6135,7 @@ msgid ""
 "Keeps track of all appointments related to applicants.\n"
 msgstr ""
 "\n"
-"Theo dõi tất cả cuộc hẹn liên quan đến ứng viên.\n"
+"Theo dõi tất cả lịch hẹn liên quan đến ứng viên.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_ke_hr_payroll
@@ -6171,7 +6186,7 @@ msgstr ""
 "\n"
 "Quản lý Chi phí nhập kho\n"
 "=====================\n"
-"Phân hệ này cho phép bạn dễ dàng bổ sung chi phí trên các hoạt động lấy hàng và quyết định phân chia các chi phí này cho các lần dịch chuyển tồn kho tương ứng để hạch toán chúng khi định giá hàng tồn kho.\n"
+"Phân hệ này cho phép bạn dễ dàng bổ sung chi phí trên các hoạt động lấy hàng và quyết định phân chia các chi phí này cho các lần điều chuyển tồn kho tương ứng để hạch toán chúng khi định giá hàng tồn kho.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_board
@@ -11512,7 +11527,7 @@ msgid ""
 "    * Defines the default taxes\n"
 "    * Defines default tax report\n"
 "\n"
-"This was done in collaboration with Broadmax Partner in Turkey.\n"
+"This was done in collaboration with Broadmax Partner in Türkiye.\n"
 msgstr ""
 "\n"
 "Hệ thống tài khoản của Thổ Nhĩ Kỳ\n"
@@ -11748,7 +11763,7 @@ msgid ""
 "======================================\n"
 msgstr ""
 "\n"
-"Xác thực dịch chuyển tồn kho cho Dịch vụ Hiện trường\n"
+"Xác thực điều chuyển tồn kho cho Dịch vụ Hiện trường\n"
 "======================================\n"
 
 #. module: base
@@ -11805,7 +11820,7 @@ msgstr ""
 "\n"
 "Phân hệ kế toán kho\n"
 "===================\n"
-"Phân hệ này tạo một liên kết giữa phân hệ 'Kho' và 'Kế toán' và cho phép bạn tạo bút toán để xác định giá trị các lần dịch chuyển tồn kho\n"
+"Phân hệ này tạo một liên kết giữa phân hệ 'Kho' và 'Kế toán' và cho phép bạn tạo bút toán để xác định giá trị các lần điều chuyển tồn kho\n"
 "\n"
 "Tính năng Chính\n"
 "---------------------------\n"
@@ -11854,7 +11869,7 @@ msgstr ""
 "\n"
 "Tính năng:\n"
 "\n"
-"     - Có một kênh livechat liên quan đến nhóm để trả lời các câu hỏi của khách hàng của bạn.\n"
+"     - Có một kênh trò chuyện trực tiếp liên quan đến nhóm để trả lời các câu hỏi của khách hàng của bạn.\n"
 "     - Dễ dàng tạo phiếu hỗ trợ mới bằng các lệnh trong kênh.\n"
 "\n"
 
@@ -15218,7 +15233,7 @@ msgstr "Tiến hành Nâng cấp theo Kế hoạch"
 #. module: base
 #: model:ir.module.category,name:base.module_category_services_appointment
 msgid "Appointment"
-msgstr "Cuộc hẹn"
+msgstr "Lịch hẹn"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_appointment_google_calendar
@@ -15228,23 +15243,23 @@ msgstr "Lịch hẹn Google Lịch "
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_appointment_crm
 msgid "Appointment Lead Generation"
-msgstr "Tạo Lead Cuộc hẹn"
+msgstr "Tạo Lead Lịch hẹn"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_appointment_sms
 msgid "Appointment SMS"
-msgstr "SMS Cuộc hẹn"
+msgstr "SMS Lịch hẹn"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_appointment_full
 #: model:ir.module.module,summary:base.module_test_appointment_full
 msgid "Appointment Testing Module"
-msgstr "Phân hệ Kiểm thử Cuộc hẹn"
+msgstr "Phân hệ Kiểm thử Lịch hẹn"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_appointment
 msgid "Appointments"
-msgstr "Cuộc hẹn"
+msgstr "Lịch hẹn"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_appraisal_skills
@@ -15912,7 +15927,7 @@ msgstr "Bangladesh - Kế toán"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_bd_reports
 msgid "Bangladesh - Accounting Reports"
-msgstr ""
+msgstr "Bangladesh - Báo cáo kế toán"
 
 #. module: base
 #: model:ir.model,name:base.model_res_bank
@@ -19485,7 +19500,7 @@ msgstr "Đan Mạch - Hóa đơn điện tử"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_dk_intrastat
 msgid "Denmark - Intrastat"
-msgstr ""
+msgstr "Đan Mạch - Intrastat"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_dk_saft_import
@@ -20445,7 +20460,7 @@ msgstr "Nhân viên trên Thiết bị Di động"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_appointment_hr
 msgid "Employees on Appointments"
-msgstr "Nhân viên trên Cuộc hẹn"
+msgstr "Nhân viên trên Lịch hẹn"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_au_keypay
@@ -20475,7 +20490,7 @@ msgid ""
 "clients for an appointment."
 msgstr ""
 "Cho phép chọn một liên kết cuộc họp video Google Calendar để cung cấp cho "
-"khách hàng của bạn một cuộc hẹn."
+"khách hàng của bạn một lịch hẹn."
 
 #. module: base
 #: model:ir.module.module,summary:base.module_account_payment
@@ -20509,7 +20524,7 @@ msgstr "Bật cấu hình cho đến khi"
 #. module: base
 #: model:ir.module.module,description:base.module_appointment_sms
 msgid "Enable sending appointment reminders via SMS to your clients."
-msgstr "Cho phép gửi lời nhắc cuộc hẹn qua SMS cho khách hàng của bạn."
+msgstr "Cho phép gửi lời nhắc lịch hẹn qua SMS cho khách hàng của bạn."
 
 #. module: base
 #: model:ir.module.category,description:base.module_category_human_resources_contracts
@@ -20539,7 +20554,7 @@ msgid ""
 "Enrich lead created automatically through an appointment with gathered "
 "website visitor information"
 msgstr ""
-"Làm phong phú lead bằng cách tạo tự động thông qua một cuộc hẹn với thông "
+"Làm phong phú lead bằng cách tạo tự động thông qua một lịch hẹn với thông "
 "tin khách truy cập trang web được thu thập"
 
 #. module: base
@@ -23961,7 +23976,7 @@ msgstr "Ấn Độ - Kế toán"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_in_asset
 msgid "Indian - Accounting Asset"
-msgstr ""
+msgstr "Ấn Độ - Tài sản kế toán"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_in_reports
@@ -26058,7 +26073,7 @@ msgstr "Malta - Báo cáo Kế toán"
 #. module: base
 #: model:ir.module.module,summary:base.module_appointment_hr
 msgid "Manage Appointments with Employees"
-msgstr "Quản lý Cuộc hẹn với Nhân viên"
+msgstr "Quản lý Lịch hẹn với Nhân viên"
 
 #. module: base
 #: model_terms:ir.actions.act_window,help:base.action_partner_title_contact
@@ -29920,7 +29935,7 @@ msgstr "OdooBot - HR"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_im_livechat_mail_bot
 msgid "OdooBot for livechat"
-msgstr "Thêm OdooBot hỗ trợ livechat"
+msgstr "Thêm OdooBot hỗ trợ trò chuyện trực tiếp"
 
 #. module: base
 #: model:res.partner.category,name:base.res_partner_category_12
@@ -30013,7 +30028,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.category,name:base.module_category_marketing_online_appointment
 msgid "Online Appointment"
-msgstr "Cuộc hẹn online"
+msgstr "Lịch hẹn online"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_online_synchronization
@@ -31460,7 +31475,7 @@ msgstr "Lên kế hoạch tài nguyên của bạn với các công việc trong
 #: model:ir.module.category,name:base.module_category_human_resources_planning
 #: model:ir.module.module,shortdesc:base.module_planning
 msgid "Planning"
-msgstr "Lập kế hoạch"
+msgstr "Kế hoạch"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_planning_hr_skills
@@ -33042,7 +33057,7 @@ msgstr "Tập tin báo cáo"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_company__report_footer
 msgid "Report Footer"
-msgstr "Lề dưới báo cáo"
+msgstr "Footer báo cáo"
 
 #. module: base
 #: model:ir.model,name:base.model_report_layout
@@ -34260,7 +34275,7 @@ msgstr "Gửi tin nhắn văn bản làm thông báo nhắc nhở sự kiện"
 #: model:ir.module.module,description:base.module_stock_sms
 #: model:ir.module.module,summary:base.module_stock_sms
 msgid "Send text messages when final stock move"
-msgstr "Gửi tin nhắn văn bản trong bước dịch chuyển tồn kho cuối cùng"
+msgstr "Gửi tin nhắn văn bản trong bước điều chuyển tồn kho cuối cùng"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_industry_fsm_sms
@@ -36268,6 +36283,17 @@ msgid "The %s of a subsidiary must be the same as it's root company."
 msgstr "%s của công ty con phải giống công ty mẹ của nó."
 
 #. module: base
+#. odoo-python
+#: code:addons/base/models/res_users.py:0
+#, python-format
+msgid ""
+"The action \"%s\" cannot be set as the home action because it requires a "
+"record to be selected beforehand."
+msgstr ""
+"Không thể thiết lập tác vụ \"%s\" làm tác vụ trang chủ vì nó yêu cầu phải "
+"chọn trước một bản ghi."
+
+#. module: base
 #: model:ir.model.fields,help:base.field_res_country__code
 #: model:ir.model.fields,help:base.field_res_partner__country_code
 #: model:ir.model.fields,help:base.field_res_users__country_code
@@ -38108,17 +38134,17 @@ msgstr "Tunisia - Báo cáo Kế toán"
 
 #. module: base
 #: model:res.country,name:base.tr
-msgid "Turkey"
-msgstr "Thổ Nhĩ Kỳ"
+msgid "Türkiye"
+msgstr "Türkiye"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_tr
-msgid "Turkey - Accounting"
+msgid "Türkiye - Accounting"
 msgstr "Thổ Nhĩ Kỳ - Kế toán"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_tr_reports
-msgid "Turkey - Accounting Reports"
+msgid "Türkiye - Accounting Reports"
 msgstr "Thổ Nhĩ Kỳ - Báo cáo kế toán"
 
 #. module: base
@@ -38778,7 +38804,7 @@ msgstr "Sử dụng các thiết bị IoT trong hoạt động giao hàng"
 #. module: base
 #: model:ir.module.module,summary:base.module_appointment_sms
 msgid "Use SMS reminders for appointment meetings"
-msgstr "Sử dụng lời nhắc SMS cho các cuộc họp cuộc hẹn"
+msgstr "Sử dụng lời nhắc SMS cho các cuộc họp lịch hẹn"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_partner__barcode
@@ -39607,12 +39633,12 @@ msgstr "Trang web - Ủy quyền thanh toán"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_appointment_crm
 msgid "Website Appointment Lead Enrichment"
-msgstr "Làm giàu khách hàng tiềm năng về cuộc hẹn trên trang web"
+msgstr "Làm giàu khách hàng tiềm năng về lịch hẹn trên trang web"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_appointment
 msgid "Website Appointments"
-msgstr "Cuộc hẹn trên trang web"
+msgstr "Lịch hẹn trên trang web"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_documents

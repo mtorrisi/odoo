@@ -5,8 +5,8 @@
 # Translators:
 # JH CHOI <hwangtog@gmail.com>, 2023
 # Martin Trigaux, 2024
-# Sarah Park, 2024
 # Wil Odoo, 2024
+# Sarah Park, 2024
 # Daye Jeong, 2024
 # 
 msgid ""
@@ -1825,10 +1825,8 @@ msgstr ""
 #: model:ir.module.module,description:base.module_l10n_tr_reports
 msgid ""
 "\n"
-"Accounting reports for Turkey\n"
+"Accounting reports for Türkiye\n"
 msgstr ""
-"\n"
-"튀르키예 회계 보고서\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_uk_reports
@@ -4255,6 +4253,12 @@ msgid ""
 "German accounting chart and localization.\n"
 "By default, the audit trail is enabled for GoBD compliance.\n"
 msgstr ""
+"\n"
+"이 모듈에는 SKR03 또는 SKR04를 기반으로 하는 독일 계정 차트가 포함되어 있습니다.\n"
+"=========================================================================================\n"
+"\n"
+"German accounting chart and localization.\n"
+"By default, the audit trail is enabled for GoBD compliance.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_be_disallowed_expenses
@@ -11517,16 +11521,8 @@ msgid ""
 "    * Defines the default taxes\n"
 "    * Defines default tax report\n"
 "\n"
-"This was done in collaboration with Broadmax Partner in Turkey.\n"
+"This was done in collaboration with Broadmax Partner in Türkiye.\n"
 msgstr ""
-"\n"
-"터키 계정과목표\n"
-"========================================\n"
-"    * Defines the default chart of accounts\n"
-"    * Defines the default taxes\n"
-"    * Defines default tax report\n"
-"\n"
-"This was done in collaboration with Broadmax Partner in Turkey.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_auth_totp
@@ -35823,6 +35819,15 @@ msgid "The %s of a subsidiary must be the same as it's root company."
 msgstr "지점은 회사와 동일한 %s 항목을 사용해야 합니다."
 
 #. module: base
+#. odoo-python
+#: code:addons/base/models/res_users.py:0
+#, python-format
+msgid ""
+"The action \"%s\" cannot be set as the home action because it requires a "
+"record to be selected beforehand."
+msgstr "\"%s\" 작업은 먼저 레코드를 선택해야 하므로 홈 작업으로 설정할 수 없습니다."
+
+#. module: base
 #: model:ir.model.fields,help:base.field_res_country__code
 #: model:ir.model.fields,help:base.field_res_partner__country_code
 #: model:ir.model.fields,help:base.field_res_users__country_code
@@ -37581,17 +37586,17 @@ msgstr "튀니지 - 회계 보고서"
 
 #. module: base
 #: model:res.country,name:base.tr
-msgid "Turkey"
-msgstr "터키"
+msgid "Türkiye"
+msgstr "튀르키예"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_tr
-msgid "Turkey - Accounting"
+msgid "Türkiye - Accounting"
 msgstr "터키 - 회계"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_tr_reports
-msgid "Turkey - Accounting Reports"
+msgid "Türkiye - Accounting Reports"
 msgstr "터키 - 회계 보고서"
 
 #. module: base
