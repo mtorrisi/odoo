@@ -77,11 +77,11 @@ class StockValuationLayer(models.Model):
         if am_vals:
             account_moves = self.env['account.move'].sudo().create(am_vals)
             account_moves._post()
-        products_svl = groupby(self, lambda svl: svl.product_id)
-        for product, svls in products_svl:
+        products_svl = groupby(self, lambda svl: (svl.product_id, svl.company_id.anglo_saxon_accounting))
+        for (product, anglo_saxon_accounting), svls in products_svl:
             svls = self.browse(svl.id for svl in svls)
             moves = svls.stock_move_id
-            if svls.company_id.anglo_saxon_accounting:
+            if anglo_saxon_accounting:
                 moves._get_related_invoices()._stock_account_anglo_saxon_reconcile_valuation(product=product)
             moves = (moves | moves.origin_returned_move_id).with_prefetch(chain(moves._prefetch_ids, moves.origin_returned_move_id._prefetch_ids))
             for aml in moves._get_all_related_aml():
@@ -216,3 +216,7 @@ class StockValuationLayer(models.Model):
             new_valuation = unit_cost * new_valued_qty
 
         return new_valued_qty, new_valuation
+
+    def _should_impact_price_unit_receipt_value(self):
+        self.ensure_one()
+        return True

@@ -22,15 +22,16 @@
 # Nadia Martynova, 2024
 # Martin Trigaux, 2024
 # ILMIR <karamov@it-projects.info>, 2024
-# Wil Odoo, 2024
+# Ilya Rozhkov, 2024
+# Wil Odoo, 2025
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-13 10:26+0000\n"
+"POT-Creation-Date: 2025-03-19 11:06+0000\n"
 "PO-Revision-Date: 2023-10-26 23:09+0000\n"
-"Last-Translator: Wil Odoo, 2024\n"
+"Last-Translator: Wil Odoo, 2025\n"
 "Language-Team: Russian (https://app.transifex.com/odoo/teams/41243/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -46,13 +47,15 @@ msgid ""
 "\n"
 "This issue occurs because the quantity becomes zero after rounding during the conversion. To fix this, adjust the conversion factors or rounding method to ensure that even the smallest quantity in the original unit does not round down to zero in the target unit."
 msgstr ""
+"\n"
+"Проблема возникает, когда после округления при пересчёте количество становится равным нулю. Чтобы исправить это, измените коэффициенты пересчёта или метод округления, чтобы даже самое маленькое количество не превращалось в ноль."
 
 #. module: point_of_sale
 #. odoo-python
 #: code:addons/point_of_sale/models/stock_picking.py:0
 #, python-format
 msgid " - From \"%s\" to \"%s\""
-msgstr ""
+msgstr "- От «%s» до «%s»"
 
 #. module: point_of_sale
 #. odoo-python
@@ -100,6 +103,13 @@ msgid "%(pos_name)s (not used)"
 msgstr "%(pos_name)s (не используется)"
 
 #. module: point_of_sale
+#. odoo-javascript
+#: code:addons/point_of_sale/static/src/app/screens/receipt_screen/receipt/receipt_header/receipt_header.js:0
+#, python-format
+msgid "%(vatLabel)s: %(vatId)s"
+msgstr "%(vatLabel)s: %(vatId)s"
+
+#. module: point_of_sale
 #. odoo-python
 #: code:addons/point_of_sale/models/pos_session.py:0
 #, python-format
@@ -141,7 +151,7 @@ msgstr "для \"%s\" найдено %s товаров."
 #: code:addons/point_of_sale/models/pos_session.py:0
 #, python-format
 msgid "%s untaxed"
-msgstr ""
+msgstr "%s без налога"
 
 #. module: point_of_sale
 #. odoo-python
@@ -918,7 +928,7 @@ msgstr ""
 #: code:addons/point_of_sale/static/src/app/main.js:0
 #, python-format
 msgid "An error occurred while loading the Point of Sale: \n"
-msgstr ""
+msgstr "Произошла ошибка при загрузке точки продаж:\n"
 
 #. module: point_of_sale
 #: model:ir.model.fields,help:point_of_sale.field_pos_config__name
@@ -1705,7 +1715,7 @@ msgstr "Комбинированный родитель"
 #: code:addons/point_of_sale/models/product.py:0
 #, python-format
 msgid "Combo products cannot contains variants or attributes"
-msgstr ""
+msgstr "Комбинированные продукты не могут содержать варианты или атрибуты"
 
 #. module: point_of_sale
 #: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_combo_form
@@ -1878,6 +1888,8 @@ msgid ""
 "Conversion Error: The following unit of measure conversions result in a zero"
 " quantity due to rounding:"
 msgstr ""
+"Ошибка преобразования: Округление приводит к нулевому количеству для "
+"следующих единиц измерения:"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_payment__currency_rate
@@ -2113,7 +2125,7 @@ msgstr "Экран клиента"
 #: code:addons/point_of_sale/static/src/app/navbar/customer_facing_display_button/customer_facing_display_button.xml:0
 #, python-format
 msgid "Customer Screen : {{message}}"
-msgstr ""
+msgstr "Экран покупателя: {{message}}"
 
 #. module: point_of_sale
 #. odoo-javascript
@@ -2129,7 +2141,7 @@ msgstr "Экран клиента подключен"
 #: code:addons/point_of_sale/static/src/app/navbar/customer_facing_display_button/customer_facing_display_button.xml:0
 #, python-format
 msgid "Customer Screen Not Found : {{message}}"
-msgstr ""
+msgstr "Экран покупателя не найден: {{message}}"
 
 #. module: point_of_sale
 #. odoo-javascript
@@ -2144,7 +2156,7 @@ msgstr "Экран клиента не поддерживается. Пожал�
 #: code:addons/point_of_sale/static/src/app/navbar/customer_facing_display_button/customer_facing_display_button.xml:0
 #, python-format
 msgid "Customer Screen Warning : {{message}}"
-msgstr ""
+msgstr "Предупреждение экрана покупателя: {{message}}"
 
 #. module: point_of_sale
 #. odoo-javascript
@@ -2665,7 +2677,7 @@ msgstr "E-mail отправлен."
 #: code:addons/point_of_sale/static/src/app/screens/receipt_screen/receipt_screen.xml:0
 #, python-format
 msgid "Email: {{currentOrder.getEmailItems().join(', ')}}"
-msgstr ""
+msgstr "Электронная почта: {{currentOrder.getEmailItems().join(', ')}}"
 
 #. module: point_of_sale
 #: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
@@ -4215,13 +4227,6 @@ msgid "OK"
 msgstr "OK"
 
 #. module: point_of_sale
-#. odoo-javascript
-#: code:addons/point_of_sale/static/src/app/screens/receipt_screen/receipt/order_receipt.xml:0
-#, python-format
-msgid "Odoo Point of Sale"
-msgstr "Odoo Точка продаж"
-
-#. module: point_of_sale
 #: model:product.template,name:point_of_sale.office_combo_product_template
 msgid "Office combo"
 msgstr "Офисная комбинация"
@@ -5102,13 +5107,6 @@ msgid "PoS Interface"
 msgstr "Интерфейс PoS"
 
 #. module: point_of_sale
-#. odoo-python
-#: code:addons/point_of_sale/models/pos_session.py:0
-#, python-format
-msgid "PoS Order"
-msgstr "Заказ PoS"
-
-#. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_product_attribute_custom_value__pos_order_line_id
 msgid "PoS Order Line"
 msgstr "Линия заказов PoS"
@@ -5139,7 +5137,7 @@ msgstr "Категория продуктов PoS"
 #: code:addons/point_of_sale/models/pos_session.py:0
 #, python-format
 msgid "PoS order %s can not be processed"
-msgstr ""
+msgstr "Заказ торговой точки %s не может быть обработан"
 
 #. module: point_of_sale
 #: model_terms:ir.ui.view,arch_db:point_of_sale.view_partner_property_form
@@ -5423,6 +5421,13 @@ msgstr "Опубликовано"
 #, python-format
 msgid "Powered by"
 msgstr "Работает на"
+
+#. module: point_of_sale
+#. odoo-javascript
+#: code:addons/point_of_sale/static/src/app/screens/receipt_screen/receipt/order_receipt.xml:0
+#, python-format
+msgid "Powered by Odoo"
+msgstr "Работает на Odoo"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_res_config_settings__module_pos_preparation_display
@@ -6605,7 +6610,7 @@ msgstr "Установите несколько цен на продукт, ав
 #: code:addons/point_of_sale/static/src/app/screens/product_screen/product_screen.js:0
 #, python-format
 msgid "Set the new discount"
-msgstr ""
+msgstr "Установите новую скидку"
 
 #. module: point_of_sale
 #. odoo-javascript
@@ -7029,7 +7034,14 @@ msgstr "Показать налог"
 #: code:addons/point_of_sale/static/src/app/screens/partner_list/partner_editor/partner_editor.xml:0
 #, python-format
 msgid "Tax ID"
-msgstr "Tax ID"
+msgstr "ИНН"
+
+#. module: point_of_sale
+#. odoo-javascript
+#: code:addons/point_of_sale/static/src/app/screens/receipt_screen/receipt/receipt_header/receipt_header.js:0
+#, python-format
+msgid "Tax ID: %(vatId)s"
+msgstr ""
 
 #. module: point_of_sale
 #: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
@@ -7158,6 +7170,9 @@ msgid ""
 "The datas received from the point of sale has been saved in the attachments.\n"
 "Please contact your support service to assist you on restoring it"
 msgstr ""
+"Заказ торговой точки с указанной ссылкой %s был получен сервером Odoo, но обработка заказа не удалась. \n"
+"Данные, полученные от торговой точки, сохранены во вложениях. \n"
+"Пожалуйста, свяжитесь с вашей службой поддержки для восстановления заказа."
 
 #. module: point_of_sale
 #. odoo-python
@@ -7185,6 +7200,8 @@ msgid ""
 "The amount of your payment lines must be rounded to validate the transaction.\n"
 "The rounding precision is %s so you should set %s or %s as payment amount instead of %s."
 msgstr ""
+"Суммы платежных строк должны быть округлены для проведения операции. \n"
+"Точность округления — %s. Укажите сумму %s или %s вместо %s."
 
 #. module: point_of_sale
 #. odoo-python
@@ -7697,6 +7714,14 @@ msgstr ""
 #: code:addons/point_of_sale/models/account_journal.py:0
 #, python-format
 msgid ""
+"This journal is associated with a payment method. You cannot archive it"
+msgstr "Этот журнал связан с методом оплаты. Вы не можете его архивировать"
+
+#. module: point_of_sale
+#. odoo-python
+#: code:addons/point_of_sale/models/account_journal.py:0
+#, python-format
+msgid ""
 "This journal is associated with a payment method. You cannot modify its type"
 msgstr "Этот журнал связан с методом оплаты. Вы не можете изменить его тип"
 
@@ -7871,11 +7896,11 @@ msgstr "Взвесить на весах"
 msgid ""
 "To delete a product, make sure all point of sale sessions are closed.\n"
 "\n"
-"Deleting a product available in a session would be like attempting to snatch ahamburger from a customer’s hand mid-bite; chaos will ensue as ketchup and mayo go flying everywhere!"
+"Deleting a product available in a session would be like attempting to snatch a hamburger from a customer’s hand mid-bite; chaos will ensue as ketchup and mayo go flying everywhere!"
 msgstr ""
-"Чтобы удалить продукт, убедитесь, что все сеансы продаж закрыты.\n"
+"Чтобы удалить продукт, убедитесь, что все сеансы торговой точки закрыты.\n"
 "\n"
-"Удаление продукта, доступного в сеансе, подобно попытке выхватить гамбургер из рук покупателя во время откусывания; начнется хаос, когда кетчуп и майонез разлетятся повсюду!"
+"Удаление продукта, доступного в сеансе, похоже на попытку выхватить гамбургер из рук клиента в момент укуса — это приведёт к хаосу, и кетчуп с майонезом разлетятся повсюду!"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order__to_invoice
@@ -8467,6 +8492,15 @@ msgstr "Вы не можете сохранить пустой заказ"
 
 #. module: point_of_sale
 #. odoo-python
+#: code:addons/point_of_sale/models/account_cash_rounding.py:0
+#, python-format
+msgid ""
+"You cannot delete a rounding method that is used in a Point of Sale "
+"configuration."
+msgstr ""
+
+#. module: point_of_sale
+#. odoo-python
 #: code:addons/point_of_sale/models/pos_config.py:0
 #, python-format
 msgid ""
@@ -8493,6 +8527,8 @@ msgid ""
 "You do not have permission to open a POS session. Please try opening a "
 "session with a different user"
 msgstr ""
+"У вас нет прав для открытия сеанса торговой точки. Попробуйте открыть сеанс "
+"с другим пользователем"
 
 #. module: point_of_sale
 #. odoo-python
@@ -8836,7 +8872,7 @@ msgstr "были дубликаты существующих заказов"
 #: code:addons/point_of_sale/static/src/app/debug/debug_widget.xml:0
 #, python-format
 msgid "{{ !barcodeReader ? 'No nomenclature' : '' }}"
-msgstr ""
+msgstr "{{ !barcodeReader ? 'Нет номенклатуры' : '' }}"
 
 #. module: point_of_sale
 #. odoo-javascript
@@ -8846,10 +8882,21 @@ msgid ""
 "{{ line.has_valid_product_lot() ? 'Valid product lot' : 'Invalid product "
 "lot'}}"
 msgstr ""
+"{{ line.has_valid_product_lot() ? 'Действительная партия продукта' : "
+"'Недействительная партия продукта' }}"
 
 #. module: point_of_sale
 #. odoo-javascript
 #: code:addons/point_of_sale/static/src/app/screens/partner_list/partner_editor/partner_editor.xml:0
 #, python-format
 msgid "{{partnerDetailsFields[item]}}"
+msgstr "{{partnerDetailsFields[item]}}"
+
+#. module: point_of_sale
+#. odoo-python
+#: code:addons/point_of_sale/models/account_journal.py:0
+#, python-format
+msgid ""
+"This journal is associated with payment method %s that is being used by "
+"order %s in the active pos session %s"
 msgstr ""

@@ -17,6 +17,10 @@
 # Meglen Hadzhitsanchev, 2024
 # Elena Varbanova, 2024
 # Petko Karamotchev, 2024
+# Margarita Katzeva, 2024
+# Milena Georgieva, 2024
+# Martin Dinovski, 2025
+# Veselina Slavkova, 2025
 # 
 msgid ""
 msgstr ""
@@ -24,7 +28,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-13 10:27+0000\n"
 "PO-Revision-Date: 2023-10-26 23:09+0000\n"
-"Last-Translator: Petko Karamotchev, 2024\n"
+"Last-Translator: Veselina Slavkova, 2025\n"
 "Language-Team: Bulgarian (https://app.transifex.com/odoo/teams/41243/bg/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -128,7 +132,7 @@ msgstr ""
 #: model:loyalty.reward,description:loyalty.10_percent_coupon_reward
 #: model:loyalty.reward,description:loyalty.10_percent_with_code_reward
 msgid "10% on your order"
-msgstr ""
+msgstr "10% от вашата поръчка"
 
 #. module: loyalty
 #: model_terms:ir.ui.view,arch_db:loyalty.gift_card_report
@@ -448,7 +452,7 @@ msgstr ""
 #: code:addons/loyalty/models/loyalty_rule.py:0
 #, python-format
 msgid "A coupon with the same code was found."
-msgstr ""
+msgstr "Намерен е купон със същия код."
 
 #. module: loyalty
 #: model:ir.model.constraint,message:loyalty.constraint_loyalty_card_card_code_unique
@@ -708,7 +712,7 @@ msgstr "Контакт"
 #: code:addons/loyalty/static/src/xml/loyalty_templates.xml:0
 #, python-format
 msgid "Control panel buttons"
-msgstr ""
+msgstr "Бутони на контролния панел"
 
 #. module: loyalty
 #. odoo-python
@@ -716,7 +720,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:loyalty.field_loyalty_program__coupon_ids
 #, python-format
 msgid "Coupon"
-msgstr ""
+msgstr "Купон"
 
 #. module: loyalty
 #: model:ir.actions.report,name:loyalty.report_loyalty_card
@@ -734,7 +738,7 @@ msgstr ""
 #: code:addons/loyalty/models/loyalty_program.py:0
 #, python-format
 msgid "Coupon point(s)"
-msgstr ""
+msgstr "Точка(и) за купон"
 
 #. module: loyalty
 #: model:loyalty.program,portal_point_name:loyalty.10_percent_coupon
@@ -761,7 +765,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:loyalty.loyalty_card_view_tree
 #, python-format
 msgid "Coupons"
-msgstr ""
+msgstr "Купони"
 
 #. module: loyalty
 #: model_terms:ir.actions.act_window,help:loyalty.loyalty_program_gift_ewallet_action
@@ -806,7 +810,7 @@ msgstr "Създадено на"
 #: model:loyalty.program,portal_point_name:loyalty.3_cabinets_plus_1_free
 #, python-format
 msgid "Credit(s)"
-msgstr ""
+msgstr "Кредит(и)"
 
 #. module: loyalty
 #: model:ir.model.fields,field_description:loyalty.field_loyalty_card__currency_id
@@ -879,7 +883,7 @@ msgstr "Отстъпка"
 #: model:ir.actions.act_window,name:loyalty.loyalty_program_discount_loyalty_action
 #: model_terms:ir.ui.view,arch_db:loyalty.loyalty_program_view_form
 msgid "Discount & Loyalty"
-msgstr ""
+msgstr "Отстъпка & лоялност"
 
 #. module: loyalty
 #: model:ir.model.fields,field_description:loyalty.field_loyalty_reward__discount_applicability
@@ -889,7 +893,7 @@ msgstr ""
 #. module: loyalty
 #: model:ir.model.fields.selection,name:loyalty.selection__loyalty_program__program_type__promo_code
 msgid "Discount Code"
-msgstr ""
+msgstr "Код за отстъпка"
 
 #. module: loyalty
 #: model:ir.model.fields,field_description:loyalty.field_loyalty_reward__discount_line_product_id
@@ -992,7 +996,7 @@ msgstr "Шаблон за имейл"
 #. module: loyalty
 #: model:ir.model.fields,field_description:loyalty.field_loyalty_program__mail_template_id
 msgid "Email template"
-msgstr ""
+msgstr "Имейл образец"
 
 #. module: loyalty
 #: model:ir.model.fields,field_description:loyalty.field_loyalty_program__date_to
@@ -1008,6 +1012,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:loyalty.field_loyalty_card__expiration_date
 msgid "Expiration Date"
 msgstr "Дата на изтичане срока на годност"
+
+#. module: loyalty
+#. odoo-python
+#: code:addons/loyalty/models/loyalty_card.py:0
+#, python-format
+msgid "Expiration date cannot be set on a loyalty card."
+msgstr ""
 
 #. module: loyalty
 #. odoo-python
@@ -1043,7 +1054,7 @@ msgstr "Последователи (партньори)"
 #. module: loyalty
 #: model:ir.model.fields,field_description:loyalty.field_loyalty_generate_wizard__mode
 msgid "For"
-msgstr ""
+msgstr "за"
 
 #. module: loyalty
 #. odoo-python
@@ -1153,7 +1164,7 @@ msgstr ""
 #: model:product.template,name:loyalty.gift_card_product_50_product_template
 #, python-format
 msgid "Gift Card"
-msgstr ""
+msgstr "Карта за подарък"
 
 #. module: loyalty
 #: model_terms:ir.ui.view,arch_db:loyalty.loyalty_program_view_form
@@ -1189,7 +1200,7 @@ msgstr ""
 #. module: loyalty
 #: model:ir.actions.act_window,name:loyalty.loyalty_program_gift_ewallet_action
 msgid "Gift cards & eWallet"
-msgstr ""
+msgstr "Карти за подарък и електронен портфейл."
 
 #. module: loyalty
 #: model:ir.model.fields,field_description:loyalty.field_loyalty_generate_wizard__points_granted
@@ -1347,7 +1358,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:loyalty.res_partner_form
 #, python-format
 msgid "Loyalty Cards"
-msgstr ""
+msgstr "Карти за лоялност"
 
 #. module: loyalty
 #: model:ir.model,name:loyalty.model_loyalty_mail
@@ -1357,7 +1368,7 @@ msgstr ""
 #. module: loyalty
 #: model:ir.model,name:loyalty.model_loyalty_card
 msgid "Loyalty Coupon"
-msgstr ""
+msgstr "Купони за лоялност"
 
 #. module: loyalty
 #: model:ir.model,name:loyalty.model_loyalty_program
@@ -1379,7 +1390,7 @@ msgstr "Правило за лоялност"
 #: code:addons/loyalty/models/loyalty_program.py:0
 #, python-format
 msgid "Loyalty point(s)"
-msgstr ""
+msgstr "Точка(и) за лоялност"
 
 #. module: loyalty
 #: model:ir.model.fields,field_description:loyalty.field_loyalty_reward__discount_max_amount
@@ -1584,7 +1595,7 @@ msgstr "Продукти"
 #: model:ir.model.fields,field_description:loyalty.field_loyalty_reward__program_id
 #: model:ir.model.fields,field_description:loyalty.field_loyalty_rule__program_id
 msgid "Program"
-msgstr ""
+msgstr "Програма"
 
 #. module: loyalty
 #: model:ir.model.fields,field_description:loyalty.field_loyalty_program__name
@@ -1611,7 +1622,7 @@ msgstr ""
 #: code:addons/loyalty/models/loyalty_program.py:0
 #, python-format
 msgid "Promo Code"
-msgstr ""
+msgstr "Промо код"
 
 #. module: loyalty
 #. odoo-python
@@ -1819,7 +1830,7 @@ msgstr ""
 #: code:addons/loyalty/models/loyalty_rule.py:0
 #, python-format
 msgid "The promo code must be unique."
-msgstr ""
+msgstr "Промокодът трябва да е уникален."
 
 #. module: loyalty
 #: model:ir.model.constraint,message:loyalty.constraint_loyalty_reward_required_points_positive

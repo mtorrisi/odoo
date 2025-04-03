@@ -2079,7 +2079,8 @@ class TestComposerResultsComment(TestMailComposer, CronMixinCase):
         ))
         composer = composer_form.save()
         with self.mock_mail_gateway(mail_unlink_sent=False), self.mock_mail_app():
-            composer.action_send_mail()
+            # don't want to test duplicates, more email management
+            composer.with_context(mailing_document_based=True).action_send_mail()
 
         # find partners created during sending (as emails are transformed into partners)
         # FIXME: currently email finding based on formatted / multi emails does
@@ -2770,6 +2771,8 @@ class TestComposerResultsMass(TestMailComposer):
                                             ],
                                             'body_content': exp_body,
                                             'email_from': self.partner_employee_2.email_formatted,
+                                            # profit from this test to check references are set to message_id in mailing emails
+                                            'references_message_id_check': True,
                                             'subject': exp_subject,
                                         },
                                         fields_values={

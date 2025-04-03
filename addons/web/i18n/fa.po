@@ -21,18 +21,19 @@
 # Martin Trigaux, 2023
 # Sahar Daraye <sahar.daraye.1369@gmail.com>, 2024
 # Hamed Mohammadi <hamed@dehongi.com>, 2024
-# Hanna Kheradroosta, 2024
 # pfp pfp <pfpour@yahoo.com>, 2024
 # Arash Farahmandi <farahmandi.arash@gmail.com>, 2024
-# Mostafa Barmshory <mostafa.barmshory@gmail.com>, 2024
+# Mostafa Barmshory <mostafa.barmshory@gmail.com>, 2025
+# Hanna Kheradroosta, 2025
+# Dynamic Business Group, 2025
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-13 10:28+0000\n"
+"POT-Creation-Date: 2025-02-10 10:35+0000\n"
 "PO-Revision-Date: 2023-10-26 23:09+0000\n"
-"Last-Translator: Mostafa Barmshory <mostafa.barmshory@gmail.com>, 2024\n"
+"Last-Translator: Dynamic Business Group, 2025\n"
 "Language-Team: Persian (https://app.transifex.com/odoo/teams/41243/fa/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -180,33 +181,21 @@ msgid ""
 "                        font-weight: normal;\n"
 "                        font-style: normal;\n"
 "                    }"
-msgstr ""
-"```html\n"
-") format(\"woff\");\n"
-"                        وزن-قلم: عادی;\n"
-"                        سبک-قلم: عادی;\n"
-"                    }\n"
-"```"
+msgstr ") format(\"woff\"); وزن-فونت: عادی; سبک-فونت: عادی; }"
 
 #. module: web
 #. odoo-javascript
 #: code:addons/web/static/src/views/calendar/filter_panel/calendar_filter_panel.js:0
 #, python-format
 msgid "+ Add %s"
-msgstr ""
-"```\n"
-"+ افزودن %s\n"
-"```"
+msgstr "+ اضافه کردن %s"
 
 #. module: web
 #. odoo-javascript
 #: code:addons/web/static/src/webclient/user_menu/user_menu_items.xml:0
 #, python-format
 msgid "+ KEY"
-msgstr ""
-"```plaintext\n"
-"+ کلید\n"
-"```"
+msgstr "+ کلید"
 
 #. module: web
 #. odoo-javascript
@@ -272,10 +261,7 @@ msgstr "۱۰.۳۰"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "100"
-msgstr ""
-"```html\n"
-"۱۰۰\n"
-"```"
+msgstr "100"
 
 #. module: web
 #. odoo-javascript
@@ -347,10 +333,7 @@ msgstr "۱۲۳۴"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "12:00"
-msgstr ""
-"```\n"
-"۱۲:۰۰\n"
-"```"
+msgstr "۱۲:۰۰"
 
 #. module: web
 #. odoo-javascript
@@ -592,10 +575,7 @@ msgstr ""
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.view_base_document_layout
 msgid "<i class=\"fa fa-repeat\"/> Reset"
-msgstr ""
-"```html\n"
-"<i class=\"fa fa-repeat\"/> بازنشانی\n"
-"```"
+msgstr "<i class=\"fa fa-repeat\"/> تنظیم مجدد"
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.report_invoice_wizard_preview
@@ -650,26 +630,18 @@ msgid ""
 "<span class=\"w-100 o_force_ltr\" itemprop=\"streetAddress\">77 Santa Barbara\n"
 "                                       Rd<br/>Pleasant Hill CA 94523<br/>United States</span>"
 msgstr ""
-"```html\n"
-"<span class=\"w-100 o_force_ltr\" itemprop=\"streetAddress\">۷۷ سانتا باربارا\n"
-"                                       Rd<br/>پلزنت هیل CA ۹۴۵۲۳<br/>ایالات متحده</span>\n"
-"```"
+"<span class=\"w-100 o_force_ltr\" itemprop=\"streetAddress\">۷۷ سانتا "
+"باربارا <br/>پلیزنت هیل، کالیفرنیا، ۹۴۵۲۳<br/>ایالات متحده</span>"
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.report_invoice_wizard_preview
 msgid "<span id=\"line_tax_ids\">Tax 15%</span>"
-msgstr ""
-"```html\n"
-"<span id=\"line_tax_ids\">مالیات ۱۵٪</span>\n"
-"```"
+msgstr "<span id=\"line_tax_ids\">مالیات ۱۵٪</span>"
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.report_invoice_wizard_preview
 msgid "<span itemprop=\"name\">Deco Addict</span>"
-msgstr ""
-"```html\n"
-"<span itemprop=\"name\">دکو ادیکت</span>\n"
-"```"
+msgstr "<span itemprop=\"name\">دکو ادیکت</span>"
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.report_invoice_wizard_preview
@@ -696,11 +668,7 @@ msgstr "<span>توضیحات</span>"
 msgid ""
 "<span>Invoice</span>\n"
 "                           <span>INV/2023/00003</span>"
-msgstr ""
-"```html\n"
-"<span>فاکتور</span>\n"
-"                           <span>INV/2023/00003</span>\n"
-"```"
+msgstr "<span>فاکتور</span> <span>INV/2023/00003</span>"
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.report_invoice_wizard_preview
@@ -728,10 +696,7 @@ msgid ""
 "<span>[FURN_8220] Four Person Desk<br/>\n"
 "                                       Four person modern office workstation</span>"
 msgstr ""
-"```html\n"
-"<span>[FURN_8220] میز چهار نفره<br/>\n"
-"                                       ایستگاه کاری اداری مدرن چهار نفره</span>\n"
-"```"
+"<span>[FURN_8220] میز چهارنفره<br/> ایستگاه کاری اداری مدرن چهارنفره</span>"
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.report_invoice_wizard_preview
@@ -739,18 +704,13 @@ msgid ""
 "<span>[FURN_8999] Three-Seat Sofa<br/>\n"
 "                                       Three Seater Sofa with Lounger in Steel Grey Colour</span>"
 msgstr ""
-"```html\n"
-"<span>[FURN_8999] کاناپه سه‌نفره<br/>\n"
-"                             کاناپه سه‌نفره با مکان برای استراحت در رنگ خاکستری فولادی</span>\n"
-"```"
+"<span>[FURN_8999] مبل سه نفره<br/> مبل سه‌نفره به همراه لاونجر به رنگ "
+"خاکستری فولادی</span>"
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.address_layout
 msgid "<strong>Address block</strong>"
-msgstr ""
-"```html\n"
-"<strong>بخش آدرس</strong>\n"
-"```"
+msgstr "<strong>بلوک آدرس</strong>"
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.external_layout_bold
@@ -758,10 +718,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:web.external_layout_standard
 #: model_terms:ir.ui.view,arch_db:web.external_layout_striped
 msgid "<strong>Company address block</strong>"
-msgstr ""
-"```html\n"
-"<strong>بلوک آدرس شرکت</strong>\n"
-"```"
+msgstr "<strong>بلاک آدرس شرکت</strong>"
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.external_layout_bold
@@ -769,10 +726,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:web.external_layout_standard
 #: model_terms:ir.ui.view,arch_db:web.external_layout_striped
 msgid "<strong>Company details block</strong>"
-msgstr ""
-"```html\n"
-"<strong>بلوک جزئیات شرکت</strong>\n"
-"```"
+msgstr "<strong>بلوک جزئیات شرکت</strong>"
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.report_invoice_wizard_preview
@@ -782,10 +736,7 @@ msgstr "<strong>تاریخ انجام<strong/>"
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.address_layout
 msgid "<strong>Information block</strong>"
-msgstr ""
-"```html\n"
-"<strong>بلوک اطلاعات</strong>\n"
-"```"
+msgstr "<strong>بلوک اطلاعات</strong>"
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.report_invoice_wizard_preview
@@ -800,10 +751,7 @@ msgstr "<strong>مجموع</strong>"
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.report_invoice_wizard_preview
 msgid "<strong>Untaxed Amount</strong>"
-msgstr ""
-"```html\n"
-"<strong>مبلغ بدون مالیات</strong>\n"
-"```"
+msgstr "<strong>مبلغ بدون مالیات</strong>"
 
 #. module: web
 #. odoo-javascript
@@ -827,12 +775,7 @@ msgid ""
 "@font-face {\n"
 "                        font-family: \"font\";\n"
 "                        src: url(data:font/ttf;base64,"
-msgstr ""
-"```html\n"
-"        @font-face {\n"
-"                        font-family: \"فونت\";\n"
-"                        src: url(data:font/ttf;base64,\n"
-"```"
+msgstr "@font-face { font-family: \"font\"; src: url(data:font/ttf;base64,"
 
 #. module: web
 #. odoo-javascript
@@ -1492,6 +1435,13 @@ msgid "BACK arrow"
 msgstr "فلش برگشت"
 
 #. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/search/control_panel/control_panel.js:0
+#, python-format
+msgid "Back to “%s”"
+msgstr ""
+
+#. module: web
 #: model:ir.model.fields,field_description:web.field_base_document_layout__layout_background_image
 msgid "Background Image"
 msgstr "تصویر پس زمینه"
@@ -2034,7 +1984,6 @@ msgstr "نام شرکت"
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.external_layout_bold
-#: model_terms:ir.ui.view,arch_db:web.external_layout_boxed
 #: model_terms:ir.ui.view,arch_db:web.external_layout_standard
 #: model_terms:ir.ui.view,arch_db:web.external_layout_striped
 msgid "Company tagline"
@@ -2215,7 +2164,6 @@ msgstr "حق تالیف © 2004"
 
 #. module: web
 #. odoo-javascript
-#: code:addons/web/static/src/views/fields/image/image_field.js:0
 #: code:addons/web/static/src/views/fields/signature/signature_field.js:0
 #, python-format
 msgid "Could not display the selected image"
@@ -2230,10 +2178,10 @@ msgstr "نمی‌توان فایل پی‌دی‌اف انتخاب‌شده را
 
 #. module: web
 #. odoo-javascript
-#: code:addons/web/static/src/views/fields/image_url/image_url_field.js:0
+#: code:addons/web/static/src/views/fields/google_slide_viewer/google_slide_viewer.js:0
 #, python-format
-msgid "Could not display the specified image url."
-msgstr "نمی‌توان تصویر url مشخص شده نمایش داد."
+msgid "Could not display the selected spreadsheet"
+msgstr "نمی‌توان صفحه‌گسترده انتخاب‌شده را نمایش داد"
 
 #. module: web
 #. odoo-javascript
@@ -2843,10 +2791,7 @@ msgstr "دانلود xlsx"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "Dracula"
-msgstr ""
-"```\n"
-"دراکولا\n"
-"```"
+msgstr "دراکولا"
 
 #. module: web
 #. odoo-javascript
@@ -3029,10 +2974,7 @@ msgstr "خطا"
 #: code:addons/web/static/src/views/kanban/kanban_column_quick_create.xml:0
 #, python-format
 msgid "Esc"
-msgstr ""
-"```html\n"
-"فرار\n"
-"```"
+msgstr "خارج شوید"
 
 #. module: web
 #. odoo-javascript
@@ -3500,6 +3442,14 @@ msgstr "با Odoo Enterprise این ویژگی و بسیاری موارد دیگ
 #, python-format
 msgid "Go to URL"
 msgstr "به URL بروید"
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/views/fields/google_slide_viewer/google_slide_viewer.js:0
+#: code:addons/web/static/src/views/fields/google_slide_viewer/google_slide_viewer.xml:0
+#, python-format
+msgid "Google Slide Viewer"
+msgstr ""
 
 #. module: web
 #. odoo-javascript
@@ -4388,6 +4338,13 @@ msgstr "بارگیری داده های نمایشی"
 
 #. module: web
 #. odoo-javascript
+#: code:addons/web/static/src/views/graph/graph_controller.xml:0
+#, python-format
+msgid "Load everything anyway."
+msgstr ""
+
+#. module: web
+#. odoo-javascript
 #: code:addons/web/static/src/views/kanban/kanban_renderer.xml:0
 #: code:addons/web/static/src/views/kanban/kanban_renderer.xml:0
 #, python-format
@@ -4541,6 +4498,13 @@ msgstr "بسیاری به یک"
 #, python-format
 msgid "Match"
 msgstr "همخوانی"
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/views/fields/gauge/gauge_field.js:0
+#, python-format
+msgid "Max value"
+msgstr ""
 
 #. module: web
 #. odoo-javascript
@@ -4737,6 +4701,14 @@ msgstr "ماه"
 #, python-format
 msgid "More"
 msgstr "بیشتر"
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/views/fields/statusbar/statusbar_field.xml:0
+#: code:addons/web/static/src/views/fields/statusbar/statusbar_field.xml:0
+#, python-format
+msgid "More..."
+msgstr "بیشتر..."
 
 #. module: web
 #. odoo-javascript
@@ -4971,10 +4943,7 @@ msgstr "قرن بعدی"
 #: code:addons/web/static/src/core/datetime/datetime_picker.js:0
 #, python-format
 msgid "Next decade"
-msgstr ""
-"```\n"
-"دهه بعد\n"
-"```"
+msgstr "دهه بعدی"
 
 #. module: web
 #. odoo-javascript
@@ -5645,10 +5614,7 @@ msgstr "مردم و بدنه"
 #: code:addons/web/static/src/views/fields/percent_pie/percent_pie_field.js:0
 #, python-format
 msgid "PercentPie"
-msgstr ""
-"```html\n"
-"درصدپای\n"
-"```"
+msgstr "پای درصد"
 
 #. module: web
 #. odoo-javascript
@@ -5786,10 +5752,7 @@ msgstr "ترجیحات"
 #: code:addons/web/static/src/views/fields/signature/signature_field.js:0
 #, python-format
 msgid "Prefill with"
-msgstr ""
-"```\n"
-"پیش پر کردن با\n"
-"```"
+msgstr "با استفاده از"
 
 #. module: web
 #. odoo-javascript
@@ -6285,10 +6248,7 @@ msgstr "پایان زمان درخواست"
 #: code:addons/web/static/src/views/view_button/view_button.xml:0
 #, python-format
 msgid "Required:"
-msgstr ""
-"```\n"
-"ضروری:\n"
-"```"
+msgstr "ضروری:"
 
 #. module: web
 #. odoo-javascript
@@ -6403,10 +6363,7 @@ msgstr "شاسی‌بلند"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "Sagittarius"
-msgstr ""
-"```plaintext\n"
-"قوس\n"
-"```"
+msgstr "کماندار"
 
 #. module: web
 #. odoo-javascript
@@ -6670,6 +6627,13 @@ msgstr "انتخاب یک نما"
 #, python-format
 msgid "Select all"
 msgstr "انتخاب همه"
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/views/list/list_controller.xml:0
+#, python-format
+msgid "Select all records matching the search"
+msgstr ""
 
 #. module: web
 #. odoo-javascript
@@ -6996,6 +6960,13 @@ msgstr "وضعیت"
 
 #. module: web
 #. odoo-javascript
+#: code:addons/web/static/src/views/fields/statusbar/statusbar_field.xml:0
+#, python-format
+msgid "Statusbar"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
 #: code:addons/web/static/src/webclient/settings_form_view/settings_confirmation_dialog.xml:0
 #, python-format
 msgid "Stay Here"
@@ -7064,10 +7035,7 @@ msgstr "پشتیبانی"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "Symbols"
-msgstr ""
-"```\n"
-"نمادها\n"
-"```"
+msgstr "نشانه‌ها"
 
 #. module: web
 #. odoo-javascript
@@ -7075,10 +7043,7 @@ msgstr ""
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "T-Rex"
-msgstr ""
-"```\n"
-"تی-رکس\n"
-"```"
+msgstr "تی‌رکس"
 
 #. module: web
 #. odoo-javascript
@@ -7293,6 +7258,15 @@ msgstr ""
 "کامپایل سبک با شکست مواجه شد. این یک خطا از طرف مدیر یا توسعه‌دهنده است که "
 "باید برای کل پایگاه داده قبل از ادامه کار، برطرف شود. برای جزئیات به کنسول "
 "مرورگر یا لاگ‌های سرور مراجعه کنید."
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/views/graph/graph_controller.xml:0
+#, python-format
+msgid ""
+"There are too many data. The graph only shows a sample. Use the filters to "
+"refine the scope."
+msgstr ""
 
 #. module: web
 #. odoo-python
@@ -8211,7 +8185,7 @@ msgstr "برای ایجاد سوابق به صورت مشروط یک دامنه 
 #: code:addons/web/controllers/home.py:0
 #, python-format
 msgid "Wrong login/password"
-msgstr "نام وردو/گذرواژه اشتباه"
+msgstr "نام کاربری یا گذرواژه اشتباه است."
 
 #. module: web
 #. odoo-javascript
@@ -8454,10 +8428,7 @@ msgstr "جذب کننده"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "access"
-msgstr ""
-"```plaintext\n"
-"دسترسی\n"
-"```"
+msgstr "دسترسی"
 
 #. module: web
 #. odoo-javascript
@@ -9541,10 +9512,7 @@ msgstr "بالون"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "ballot"
-msgstr ""
-"```html\n"
-"رأی‌گیری\n"
-"```"
+msgstr "بالوت"
 
 #. module: web
 #. odoo-javascript
@@ -9651,10 +9619,7 @@ msgstr "بنر"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "bar"
-msgstr ""
-"```\n"
-"بار\n"
-"```"
+msgstr "نوار"
 
 #. module: web
 #. odoo-javascript
@@ -9936,10 +9901,7 @@ msgstr "لیوان آبجو"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "beetle"
-msgstr ""
-"```html\n"
-"سوسک\n"
-"```"
+msgstr "سوسک"
 
 #. module: web
 #. odoo-javascript
@@ -10458,10 +10420,7 @@ msgstr "مربع آبی"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "blue-faced"
-msgstr ""
-"```html\n"
-"آبی‌رنگ\n"
-"```"
+msgstr "آبی‌رو"
 
 #. module: web
 #. odoo-javascript
@@ -10620,10 +10579,7 @@ msgstr "بوت"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "border"
-msgstr ""
-"```html\n"
-"مرز\n"
-"```"
+msgstr "border"
 
 #. module: web
 #. odoo-javascript
@@ -10809,10 +10765,7 @@ msgstr "صبحانه"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "breast"
-msgstr ""
-"```html\n"
-"سینه\n"
-"```"
+msgstr "پستان"
 
 #. module: web
 #. odoo-javascript
@@ -12044,10 +11997,7 @@ msgstr "cut"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "chopsticks"
-msgstr ""
-"```\n"
-"چوبک های غذاخوری\n"
-"```"
+msgstr "چاپ‌استیک"
 
 #. module: web
 #. odoo-javascript
@@ -13219,10 +13169,7 @@ msgstr "جنایی"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "crochet"
-msgstr ""
-"```html\n"
-"قلاب بافی\n"
-"```"
+msgstr "crochet"
 
 #. module: web
 #. odoo-javascript
@@ -13879,10 +13826,7 @@ msgstr "خروج"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "departures"
-msgstr ""
-"```\n"
-"تَرک‌کردن‌ها\n"
-"```"
+msgstr "رفتن‌ها"
 
 #. module: web
 #. odoo-javascript
@@ -14739,10 +14683,7 @@ msgstr "ایرباد"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "earth"
-msgstr ""
-"```\n"
-"زمین\n"
-"```"
+msgstr "زمین"
 
 #. module: web
 #. odoo-javascript
@@ -15018,10 +14959,7 @@ msgstr "سوارکاری"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "eruption"
-msgstr ""
-"```\n"
-"فوران\n"
-"```"
+msgstr "پیشروی"
 
 #. module: web
 #. odoo-javascript
@@ -15748,10 +15686,7 @@ msgstr "خانواده: مرد، مرد، دختر"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "family: man, man, girl, boy"
-msgstr ""
-"```\n"
-"خانواده: مرد، مرد، دختر، پسر\n"
-"```"
+msgstr "خانواده: مرد، مرد، دختر، پسر"
 
 #. module: web
 #. odoo-javascript
@@ -16035,10 +15970,7 @@ msgstr "حصار"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "ferris"
-msgstr ""
-"```html\n"
-"فرسیس\n"
-"```"
+msgstr "ferris"
 
 #. module: web
 #. odoo-javascript
@@ -16465,10 +16397,7 @@ msgstr "فِلِر-دِ-لیس"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "flex"
-msgstr ""
-"```\n"
-"فِلِکس\n"
-"```"
+msgstr "انعطاف‌پذیر"
 
 #. module: web
 #. odoo-javascript
@@ -17232,10 +17161,7 @@ msgstr "ژنی"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "geometric"
-msgstr ""
-"```\n"
-"هندسی\n"
-"```"
+msgstr "هندسی"
 
 #. module: web
 #. odoo-javascript
@@ -18167,10 +18093,7 @@ msgstr "دست دادن"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "hang loose"
-msgstr ""
-"```html\n"
-"آرام باش\n"
-"```"
+msgstr "شل و آرام باش"
 
 #. module: web
 #. odoo-javascript
@@ -18475,10 +18398,7 @@ msgstr "hex"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "hi-vis"
-msgstr ""
-"```\n"
-"سلام-بازدید\n"
-"```"
+msgstr "نحو قابل مشاهده"
 
 #. module: web
 #. odoo-javascript
@@ -19420,10 +19340,7 @@ msgstr "بین جهتی"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "interlocking"
-msgstr ""
-"```html\n"
-"درهم تنیدگی\n"
-"```"
+msgstr "قفل کننده"
 
 #. module: web
 #. odoo-javascript
@@ -19604,10 +19521,7 @@ msgstr "جیائوزی"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "jigsaw"
-msgstr ""
-"```html\n"
-"پازل\n"
-"```"
+msgstr "کتیبه"
 
 #. module: web
 #. odoo-javascript
@@ -19694,10 +19608,7 @@ msgstr "juggle"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "juggling"
-msgstr ""
-"```\n"
-"ژانگولربازی\n"
-"```"
+msgstr "jonglerie"
 
 #. module: web
 #. odoo-javascript
@@ -19827,10 +19738,7 @@ msgstr "کی بورد"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "keycap"
-msgstr ""
-"```\n"
-"کی‌کپ\n"
-"```"
+msgstr "کلیدکاپ"
 
 #. module: web
 #. odoo-javascript
@@ -20494,10 +20402,7 @@ msgstr "پا"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "lemon"
-msgstr ""
-"```html\n"
-"لیمو\n"
-"```"
+msgstr "لیمو"
 
 #. module: web
 #. odoo-javascript
@@ -20532,10 +20437,7 @@ msgstr "نامه"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "letterbox"
-msgstr ""
-"```html\n"
-"        صندوق نامه\n"
-"```"
+msgstr "نامه‌دان"
 
 #. module: web
 #. odoo-javascript
@@ -20844,10 +20746,7 @@ msgstr "لوو"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "loop"
-msgstr ""
-"```\n"
-"لوپ\n"
-"```"
+msgstr "حلقه"
 
 #. module: web
 #. odoo-javascript
@@ -20994,10 +20893,7 @@ msgstr "صورت رو به پایین"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "mad"
-msgstr ""
-"```\n"
-"جنون\n"
-"```"
+msgstr "مد"
 
 #. module: web
 #. odoo-javascript
@@ -21796,10 +21692,7 @@ msgstr "مدیر"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "mandarin"
-msgstr ""
-"```html\n"
-"ماندارین\n"
-"```"
+msgstr "ماندارین"
 
 #. module: web
 #. odoo-javascript
@@ -21945,10 +21838,7 @@ msgstr "لباس یونیفرم هنرهای رزمی"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "mask"
-msgstr ""
-"```\n"
-"ماسک\n"
-"```"
+msgstr "ماسک"
 
 #. module: web
 #. odoo-javascript
@@ -22099,10 +21989,7 @@ msgstr "مدیتیشن"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "medium"
-msgstr ""
-"```html\n"
-"متوسط\n"
-"```"
+msgstr "متوسط"
 
 #. module: web
 #. odoo-javascript
@@ -23908,10 +23795,7 @@ msgstr "پرچم را برافراشته و صندوق پست را باز کنی
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "optical"
-msgstr ""
-"```html\n"
-"نوری\n"
-"```"
+msgstr "نوری"
 
 #. module: web
 #. odoo-javascript
@@ -24337,10 +24221,7 @@ msgstr "parasail"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "parascend"
-msgstr ""
-"```\n"
-"پارااسند\n"
-"```"
+msgstr "parascend"
 
 #. module: web
 #. odoo-javascript
@@ -25219,10 +25100,7 @@ msgstr "تصویر"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "pie"
-msgstr ""
-"```html\n"
-"پای\n"
-"```"
+msgstr "پای"
 
 #. module: web
 #. odoo-javascript
@@ -25369,10 +25247,7 @@ msgstr "تپانچه"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "pita"
-msgstr ""
-"```html\n"
-"پیتا\n"
-"```"
+msgstr "<p>پیتا</p>"
 
 #. module: web
 #. odoo-javascript
@@ -26147,10 +26022,7 @@ msgstr "پانچ"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "punctuation"
-msgstr ""
-"```\n"
-"علائم نگارشی\n"
-"```"
+msgstr "علامات نگارشی"
 
 #. module: web
 #. odoo-javascript
@@ -26541,10 +26413,7 @@ msgstr "موش"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "rays"
-msgstr ""
-"```\n"
-"پرتوها\n"
-"```"
+msgstr "<ری>رای‌ها</ری>"
 
 #. module: web
 #. odoo-javascript
@@ -26871,10 +26740,7 @@ msgstr "کلاه ایمنی امدادگر"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "resort"
-msgstr ""
-"```html\n"
-"اقامتگاه\n"
-"```"
+msgstr "استراحتگاه"
 
 #. module: web
 #. odoo-javascript
@@ -27050,10 +26916,7 @@ msgstr "راست‌به‌چپ"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "rightwards"
-msgstr ""
-"```html\n"
-"به سمت راست\n"
-"```"
+msgstr "چپ‌به‌سمت‌بالا"
 
 #. module: web
 #. odoo-javascript
@@ -27061,10 +26924,7 @@ msgstr ""
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "ring"
-msgstr ""
-"```\n"
-"حلقه\n"
-"```"
+msgstr "زنگ"
 
 #. module: web
 #. odoo-javascript
@@ -27505,10 +27365,7 @@ msgstr "ساندویچ"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "santa"
-msgstr ""
-"```html\n"
-"سانتا\n"
-"```"
+msgstr "santa"
 
 #. module: web
 #. odoo-javascript
@@ -27576,10 +27433,7 @@ msgstr "ساتورن"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "saturnine"
-msgstr ""
-"```html\n"
-"عبوس\n"
-"```"
+msgstr "ستارگون"
 
 #. module: web
 #. odoo-javascript
@@ -27886,10 +27740,7 @@ msgstr "سلفی"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "semi"
-msgstr ""
-"```\n"
-"نیمه\n"
-"```"
+msgstr "نیمه"
 
 #. module: web
 #. odoo-javascript
@@ -27985,10 +27836,7 @@ msgstr "لرزش"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "shaker"
-msgstr ""
-"```html\n"
-"شیکر\n"
-"```"
+msgstr "شیکر"
 
 #. module: web
 #. odoo-javascript
@@ -28076,10 +27924,7 @@ msgstr "دسته‌ای از برنج"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "shedding"
-msgstr ""
-"```\n"
-"ریزش\n"
-"```"
+msgstr "کاهش دادن"
 
 #. module: web
 #. odoo-javascript
@@ -28607,10 +28452,7 @@ msgstr "کارآگاه"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "slice"
-msgstr ""
-"```html\n"
-"برش\n"
-"```"
+msgstr "اسلایس"
 
 #. module: web
 #. odoo-javascript
@@ -29384,19 +29226,7 @@ msgstr "نمایش داده شده"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "split"
-msgstr ""
-"```\n"
-"<پیمانه name=\"وب سایت\">\n"
-"    <فیلد name=\"نام_وب_سایت\">نام وب‌سایت</فیلد>\n"
-"    <فیلد name=\"شرح_کوتاه\">%s وب‌سایت پیش‌فرض شما</فیلد>\n"
-"</پیمانه>\n"
-"<p>این ماژول به شما اجازه می‌دهد وب‌سایت‌های متعددی را مدیریت کنید. می‌توانید یک وب‌سایت پیش‌فرض را از منوی تنظیمات انتخاب نمایید.</p>\n"
-"<ul>\n"
-"    <li>مدیریت قالب‌های وب‌سایت</li>\n"
-"    <li>پیکربندی دامنه‌های وب‌سایت</li>\n"
-"    <li>پشتیبانی از چندین زبانی</li>\n"
-"</ul>\n"
-"```"
+msgstr "تقسیم"
 
 #. module: web
 #. odoo-javascript
@@ -29484,10 +29314,7 @@ msgstr "نهنگ آبفشان"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "springs"
-msgstr ""
-"```html\n"
-"فنرها\n"
-"```"
+msgstr "اسپرینگز"
 
 #. module: web
 #. odoo-javascript
@@ -29787,10 +29614,7 @@ msgstr "کرنومتر"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "store"
-msgstr ""
-"```\n"
-"فروشگاه\n"
-"```"
+msgstr "ذخیره کردن"
 
 #. module: web
 #. odoo-javascript
@@ -29872,10 +29696,7 @@ msgstr "دانشجو"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "studio"
-msgstr ""
-"```html\n"
-"استودیو\n"
-"```"
+msgstr "استودیو"
 
 #. module: web
 #. odoo-javascript
@@ -29932,10 +29753,7 @@ msgstr "مترو"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "suit"
-msgstr ""
-"```\n"
-"کت و شلوار\n"
-"```"
+msgstr "لباس"
 
 #. module: web
 #. odoo-javascript
@@ -30152,9 +29970,8 @@ msgstr "ریل معلق"
 #, python-format
 msgid "swan"
 msgstr ""
-"```html\n"
-"قو\n"
-"```"
+"قو<button>ن<bold>iپ</bold><csv>لiخا</csv>ن</button><input>%s<button> ارا "
+"</button></input>ن<bold>قلابiرا</bold>سiفخ<snap>0٪</snap>"
 
 #. module: web
 #. odoo-javascript
@@ -30382,10 +30199,7 @@ msgstr "تاکو"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "tada"
-msgstr ""
-"```html\n"
-"تادا\n"
-"```"
+msgstr "tada"
 
 #. module: web
 #. odoo-javascript
@@ -30399,10 +30213,7 @@ msgstr "تکواندو"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "take-off"
-msgstr ""
-"```\n"
-"برخاستن\n"
-"```"
+msgstr "برداشت"
 
 #. module: web
 #. odoo-javascript
@@ -31531,10 +31342,7 @@ msgstr "ترکیه"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "turtle"
-msgstr ""
-"```html\n"
-"لاک‌پشت\n"
-"```"
+msgstr "لاک‌پشت"
 
 #. module: web
 #. odoo-javascript
@@ -31861,10 +31669,7 @@ msgstr "جنسیت نامشخص"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "up"
-msgstr ""
-"```html\n"
-"بالا\n"
-"```"
+msgstr "بالا"
 
 #. module: web
 #. odoo-javascript
@@ -31903,10 +31708,7 @@ msgstr "پیکان بالا-راست"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "uppercase"
-msgstr ""
-"```html\n"
-"حروف بزرگ\n"
-"```"
+msgstr "uppercase"
 
 #. module: web
 #. odoo-javascript
@@ -32020,10 +31822,7 @@ msgstr "حجاب"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "versus"
-msgstr ""
-"```html\n"
-"در برابر\n"
-"```"
+msgstr "در برابر"
 
 #. module: web
 #. odoo-javascript
@@ -32436,10 +32235,7 @@ msgstr "دست تکان دادن"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "wavy"
-msgstr ""
-"```\n"
-"موجدار\n"
-"```"
+msgstr "موجدار"
 
 #. module: web
 #. odoo-javascript
@@ -32532,10 +32328,7 @@ msgstr "آب و هوا"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "web"
-msgstr ""
-"```\n"
-"وب\n"
-"```"
+msgstr "وب"
 
 #. module: web
 #. odoo-javascript
@@ -32572,10 +32365,7 @@ msgstr "جوشکاری"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "west"
-msgstr ""
-"```\n"
-"غرب\n"
-"```"
+msgstr "غرب"
 
 #. module: web
 #. odoo-javascript

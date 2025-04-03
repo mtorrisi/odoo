@@ -463,6 +463,8 @@ class AccountAccount(models.Model):
                 account.reconcile = False
             elif account.account_type in ('asset_receivable', 'liability_payable'):
                 account.reconcile = True
+            elif account.account_type == 'asset_cash':
+                account.reconcile = False
             # For other asset/liability accounts, don't do any change to account.reconcile.
 
     def _set_opening_debit(self):
@@ -565,9 +567,13 @@ class AccountAccount(models.Model):
 
     @api.model
     def _name_search(self, name, domain=None, operator='ilike', limit=None, order=None):
-        if not name and self._context.get('partner_id') and self._context.get('move_type'):
-            return self._order_accounts_by_frequency_for_partner(
-                            self.env.company.id, self._context.get('partner_id'), self._context.get('move_type'))
+        if (
+            not name
+            and (partner := self._context.get('partner_id'))
+            and (move_type := self._context.get('move_type'))
+            and (ordered_accounts := self._order_accounts_by_frequency_for_partner(self.env.company.id, partner, move_type))
+        ):
+            return ordered_accounts
         domain = domain or []
         if name:
             if operator in ('=', '!='):
@@ -657,6 +663,7 @@ class AccountAccount(models.Model):
         '''
         if not self.ids:
             return None
+        self.env['account.move.line'].invalidate_model(['amount_residual', 'amount_residual_currency', 'reconciled'])
         query = """
             UPDATE account_move_line SET
                 reconciled = CASE WHEN debit = 0 AND credit = 0 AND amount_currency = 0
@@ -666,7 +673,6 @@ class AccountAccount(models.Model):
             WHERE full_reconcile_id IS NULL and account_id IN %s
         """
         self.env.cr.execute(query, [tuple(self.ids)])
-        self.env['account.move.line'].invalidate_model(['amount_residual', 'amount_residual_currency', 'reconciled'])
 
     def _toggle_reconcile_to_false(self):
         '''Toggle the `reconcile´ boolean from True -> False
@@ -685,6 +691,8 @@ class AccountAccount(models.Model):
         if partial_lines_count > 0:
             raise UserError(_('You cannot switch an account to prevent the reconciliation '
                               'if some partial reconciliations are still pending.'))
+
+        self.env['account.move.line'].invalidate_model(['amount_residual', 'amount_residual_currency'])
         query = """
             UPDATE account_move_line
                 SET amount_residual = 0, amount_residual_currency = 0
@@ -726,6 +734,9 @@ class AccountAccount(models.Model):
             for account in self:
                 if self.env['account.move.line'].search_count([('account_id', '=', account.id), ('currency_id', 'not in', (False, vals['currency_id']))]):
                     raise UserError(_('You cannot set a currency on this account as it already has some journal entries having a different foreign currency.'))
+
+        if vals.get('deprecated') and self.env["account.tax.repartition.line"].search_count([('account_id', 'in', self.ids)], limit=1):
+            raise UserError(_("You cannot deprecate an account that is used in a tax distribution."))
 
         return super(AccountAccount, self).write(vals)
 
@@ -966,7 +977,7 @@ class AccountGroup(models.Model):
                        child.id AS child_id,
                        parent.id AS parent_id
                   FROM account_group parent
-                  JOIN account_group child
+            RIGHT JOIN account_group child
                     ON char_length(parent.code_prefix_start) < char_length(child.code_prefix_start)
                    AND parent.code_prefix_start <= LEFT(child.code_prefix_start, char_length(parent.code_prefix_start))
                    AND parent.code_prefix_end >= LEFT(child.code_prefix_end, char_length(parent.code_prefix_end))

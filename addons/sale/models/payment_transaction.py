@@ -114,7 +114,8 @@ class PaymentTransaction(models.Model):
     def _reconcile_after_done(self):
         """ Override of payment to automatically confirm quotations and generate invoices. """
         confirmed_orders = self._check_amount_and_confirm_order()
-        (self.sale_order_ids - confirmed_orders)._send_payment_succeeded_for_order_mail()
+        payment_txs = self.filtered(lambda tx: tx.operation != 'validation')
+        (payment_txs.sale_order_ids - confirmed_orders)._send_payment_succeeded_for_order_mail()
 
         auto_invoice = str2bool(
             self.env['ir.config_parameter'].sudo().get_param('sale.automatic_invoice'))
@@ -124,8 +125,14 @@ class PaymentTransaction(models.Model):
             self._invoice_sale_orders()
         super()._reconcile_after_done()
         if auto_invoice:
-            # Must be called after the super() call to make sure the invoice are correctly posted.
-            self._send_invoice()
+            if (
+                str2bool(self.env['ir.config_parameter'].sudo().get_param('sale.async_emails'))
+                and (send_invoice_cron := self.env.ref('sale.send_invoice_cron', raise_if_not_found=False))
+            ):
+                send_invoice_cron._trigger()
+            else:
+                # Must be called after the super() call to make sure the invoice are correctly posted.
+                self._send_invoice()
 
     def _send_invoice(self):
         template_id = int(self.env['ir.config_parameter'].sudo().get_param(
