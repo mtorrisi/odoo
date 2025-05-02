@@ -1,0 +1,92 @@
+<odoo>
+  <data>
+    <menuitem id="estate_property_menu_root" name="Real Estate">
+        <menuitem id="estate_property_first_level_menu" name="Advertisements">
+            <menuitem id="estate_property_menu_action" action="estate_property_action"/>
+        </menuitem>
+    </menuitem>
+    <record id="estate_property_action" model="ir.actions.act_window">
+        <field name="name">Properties</field>
+        <field name="res_model">estate.property</field>
+        <field name="view_mode">list</field>
+    </record>
+    
+        <!-- Tree View -->
+        <record id="view_tree_property" model="ir.ui.view">
+            <field name="name">estate.property.list</field>
+            <field name="model">estate.property</field>
+            <field name="arch" type="xml">
+                <list string="Properties">
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="date_availability" optional="hide"/>
+                    <field name="expected_price"/>
+                    <field name="selling_price"/>
+                    <field name="bedrooms"/>
+                    <field name="living_area"/>
+                    <field name="facades"/>
+                    <field name="garage"/>
+                    <field name="garden"/>
+                    <field name="garden_area"/>
+                    <field name="garden_orientation"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="view_form_property" model="ir.ui.view">
+            <field name="name">estate.property.form</field>
+            <field name="model">estate.property</field>
+            <field name="arch" type="xml">
+                <form string="Test">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="state" />
+                            </group>
+                            <group>
+                                <field name="date_availability"/>
+                                <field name="expected_price"/>
+                                <field name="selling_price"/>
+                            </group>
+                            <notebook>
+                                <page string="Property Details">
+                                    <group>
+                                        <field name="description"/>
+                                        <field name="postcode"/>
+                                        <field name="bedrooms"/>
+                                        <field name="facades"/>
+                                        <field name="garage"/>
+                                        <field name="garden"/>
+                                        <field name="living_area"/>
+                                        <field name="garden_area" invisible="not garden"/>
+                                        <field name="garden_orientation" string="Garden Orientation" invisible="not garden"/>
+                                    </group>
+                                </page>
+                            </notebook>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <!-- Search View -->
+        <record id="view_search_property" model="ir.ui.view">
+            <field name="name">estate.property.search</field>
+            <field name="model">estate.property</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" string="Property Name"/>
+                    <field name="postcode" string="Postcode"/>
+                    <field name="bedrooms" string="Bedrooms"/>
+                    <field name="expected_price" string="Expected price"/>
+                    <field name="selling_price" string="Selling Price"/>
+                    <field name="living_area" string="Living Area" filter_domain="[('living_area', '>=', 10)]"/>
+                    <filter name="filter_available" string="Available" domain="[('name', 'ilike', 'Available')]"/>
+                </search>
+            </field>
+        </record>
+        
+    </data>
+</odoo>
