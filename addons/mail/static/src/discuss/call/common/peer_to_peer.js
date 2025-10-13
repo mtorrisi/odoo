@@ -12,6 +12,7 @@ export const UPDATE_EVENT = Object.freeze({
     CONNECTION_CHANGE: "connection_change",
     DISCONNECT: "disconnect",
     INFO_CHANGE: "info_change",
+    RECOVERY: "recovery",
     TRACK: "track",
 });
 const LOG_LEVEL = Object.freeze({
@@ -556,6 +557,14 @@ export class PeerToPeer extends EventTarget {
                     this._recover(id, "failed at setting remoteDescription");
                     return;
                 }
+                if (!peer.connection) {
+                    this._emitLog(
+                        id,
+                        "the peer connection was closed during offer negotiation",
+                        LOG_LEVEL.WARN
+                    );
+                    return;
+                }
                 if (this._isStreamingEnabled) {
                     if (peer.connection.getTransceivers().length === 0) {
                         for (const streamType of ORDERED_TRANSCEIVER_TYPES) {
@@ -680,6 +689,7 @@ export class PeerToPeer extends EventTarget {
                 if (!peer?.connection || !this.channelId || (connectionSuccess && iceSuccess)) {
                     return;
                 }
+                this._emitUpdate({ name: UPDATE_EVENT.RECOVERY, payload: { id } });
                 this._emitLog(id, `attempting to recover connection: ${reason}`, LOG_LEVEL.ERROR);
                 this._busNotify(INTERNAL_EVENT.DISCONNECT, { targets: [peer.id] });
                 this.removePeer(peer.id);

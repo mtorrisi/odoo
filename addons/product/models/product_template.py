@@ -255,7 +255,7 @@ class ProductTemplate(models.Model):
     def _compute_cost_currency_id(self):
         env_currency_id = self.env.company.currency_id.id
         for template in self:
-            template.cost_currency_id = template.company_id.currency_id.id or env_currency_id
+            template.cost_currency_id = template.company_id.sudo().currency_id.id or env_currency_id
 
     def _compute_template_field_from_variant_field(self, fname, default=False):
         """Sets the value of the given field based on the template variant values
@@ -511,11 +511,12 @@ class ProductTemplate(models.Model):
         if self._context.get("create_product_product", True):
             templates._create_variant_ids()
 
+        # TODO remove in master: this is not needed anymore
         # This is needed to set given values to first variant after creation
         for template, vals in zip(templates, vals_list):
             related_vals = {}
             for field_name in self._get_related_fields_variant_template():
-                if vals.get(field_name):
+                if vals.get(field_name) and not template[field_name]:
                     related_vals[field_name] = vals[field_name]
             if related_vals:
                 template.write(related_vals)
