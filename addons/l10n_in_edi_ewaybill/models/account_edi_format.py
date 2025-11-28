@@ -132,7 +132,7 @@ class AccountEdiFormat(models.Model):
         cancel_json = {
             "ewbNo": ewaybill_response_json.get("ewayBillNo") or ewaybill_response_json.get("EwbNo"),
             "cancelRsnCode": int(invoices.l10n_in_edi_cancel_reason),
-            "CnlRem": invoices.l10n_in_edi_cancel_remarks,
+            "cancelRmrk": invoices.l10n_in_edi_cancel_remarks,
         }
         response = self._l10n_in_edi_ewaybill_cancel(invoices.company_id, cancel_json)
         if response.get("error"):
@@ -288,6 +288,12 @@ class AccountEdiFormat(models.Model):
                 "TransMode": invoice.l10n_in_mode,
                 "VehNo": invoice.l10n_in_vehicle_no,
                 "VehType": invoice.l10n_in_vehicle_type,
+                **{
+                    k: v for k, v in {
+                        "TransId": invoice.l10n_in_transporter_id.vat,
+                        "TransName": invoice.l10n_in_transporter_id.name,
+                    }.items() if v
+                },
             })
         elif invoice.l10n_in_mode in ("2", "3", "4"):
             doc_date = invoice.l10n_in_transportation_doc_date
@@ -502,6 +508,12 @@ class AccountEdiFormat(models.Model):
                 "transMode": invoices.l10n_in_mode,
                 "vehicleNo": invoices.l10n_in_vehicle_no or "",
                 "vehicleType": invoices.l10n_in_vehicle_type or "",
+                **{
+                    k: v for k, v in {
+                        "transporterId": invoices.l10n_in_transporter_id.vat,
+                        "transporterName": invoices.l10n_in_transporter_id.name,
+                    }.items() if v
+                },
             })
         return json_payload
 
@@ -509,9 +521,9 @@ class AccountEdiFormat(models.Model):
         extract_digits = self._l10n_in_edi_extract_digits
         tax_details_by_code = self._get_l10n_in_tax_details_by_line_code(line_tax_details.get("tax_details", {}))
         line_details = {
-            "productName": line.product_id.name,
+            "productName": line.product_id.name[:100] if line.product_id else "",
             "hsnCode": extract_digits(line.l10n_in_hsn_code),
-            "productDesc": line.name,
+            "productDesc": line.name[:100] if line.name else "",
             "quantity": line.quantity,
             "qtyUnit": line.product_uom_id.l10n_in_code and line.product_uom_id.l10n_in_code.split("-")[0] or "OTH",
             "taxableAmount": self._l10n_in_round_value(line.balance * sign),

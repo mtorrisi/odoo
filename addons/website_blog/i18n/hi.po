@@ -1,25 +1,29 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* website_blog
-# 
+# * website_blog
+#
 # Translators:
 # Martin Trigaux, 2024
 # Wil Odoo, 2024
 # Manav Shah, 2025
-# 
+# Ujjawal Pathak, 2025
+#
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-26 08:56+0000\n"
-"PO-Revision-Date: 2024-09-25 09:42+0000\n"
-"Last-Translator: Manav Shah, 2025\n"
-"Language-Team: Hindi (https://app.transifex.com/odoo/teams/41243/hi/)\n"
+"PO-Revision-Date: 2025-11-21 02:38+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Hindi <https://translate.odoo.com/projects/odoo-18/"
+"website_blog/hi/>\n"
+"Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: hi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 5.12.2\n"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.date_selector
@@ -30,7 +34,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/website_blog/models/website_blog.py:0
 msgid "%s (copy)"
-msgstr ""
+msgstr "%s (कॉपी)"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.blog_feed
@@ -82,7 +86,7 @@ msgstr ""
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.opt_blog_post_comment
 msgid "<b>Sign in</b>"
-msgstr ""
+msgstr "<b>साइन इन करें</b>"
 
 #. module: website_blog
 #: model_terms:blog.post,content:website_blog.blog_post_6
@@ -238,6 +242,8 @@ msgstr ""
 #: model_terms:web_tour.tour,rainbow_man_message:website_blog.blog
 msgid "<span><b>Good job!</b> You went through all steps of this tour.</span>"
 msgstr ""
+"<span><b>शाबाश!</b> आपने इस पूरे गाइड या प्रक्रिया के सारे कदम सफलतापूर्वक "
+"पूरे कर लिए हैं.</span>"
 
 #. module: website_blog
 #: model:blog.post,subtitle:website_blog.blog_post_2
@@ -271,7 +277,7 @@ msgstr ""
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.sidebar_blog_index
 msgid "About us"
-msgstr ""
+msgstr "हमारे बारे में"
 
 #. module: website_blog
 #: model_terms:blog.post,content:website_blog.blog_post_6
@@ -291,7 +297,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__message_needaction
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__message_needaction
 msgid "Action Needed"
-msgstr ""
+msgstr "कार्रवाई की ज़रूरत है"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__active
@@ -307,7 +313,7 @@ msgstr ""
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.blogs_nav
 msgid "All"
-msgstr ""
+msgstr "सभी "
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.blogs_nav
@@ -363,7 +369,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_blog.opt_blog_post_archive_display
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
 msgid "Archive"
-msgstr ""
+msgstr "संग्रहित करें"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.blog_blog_view_search
@@ -371,7 +377,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_blog.view_blog_post_form
 #: model_terms:ir.ui.view,arch_db:website_blog.view_blog_post_search
 msgid "Archived"
-msgstr ""
+msgstr "संग्रहीत किया गया"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.opt_sidebar_blog_index_archives
@@ -402,6 +408,11 @@ msgid ""
 "will go star gazing with you and overwhelm you with trivia and great "
 "knowledge."
 msgstr ""
+"खगोल विज्ञान क्लब ऐसी जगहें हैं जहाँ बहुत सारे जानकार लोग (शौकिया खगोलविद) "
+"होते हैं, जिन्हें अपना ज्ञान दूसरों के साथ बांटना बहुत पसंद होता है. आप बस "
+"एक कोक और कुछ स्नैक्स के खर्च में उनके साथ तारे देखने जा सकते हैं. वे आपको "
+"तारों और ब्रह्मांड के बारे में ढेर सारी दिलचस्प बातें और अद्भुत जानकारी "
+"देंगे."
 
 #. module: website_blog
 #: model:blog.blog,subtitle:website_blog.blog_blog_2
@@ -417,7 +428,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__message_attachment_count
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__message_attachment_count
 msgid "Attachment Count"
-msgstr ""
+msgstr "अटैचमेंट काउंट"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__author_id
@@ -425,7 +436,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
 #: model_terms:ir.ui.view,arch_db:website_blog.view_blog_post_search
 msgid "Author"
-msgstr ""
+msgstr "लेखक"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__author_name
@@ -435,7 +446,7 @@ msgstr ""
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__author_avatar
 msgid "Avatar"
-msgstr ""
+msgstr "अवतार"
 
 #. module: website_blog
 #. odoo-python
@@ -504,7 +515,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_blog.view_blog_blog_form
 #: model_terms:ir.ui.view,arch_db:website_blog.view_blog_post_search
 msgid "Blog"
-msgstr ""
+msgstr "ब्लॉग"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__name
@@ -588,7 +599,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_blog.view_blog_blog_list
 #: model_terms:ir.ui.view,arch_db:website_blog.website_blog
 msgid "Blogs"
-msgstr ""
+msgstr "ब्लॉग"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
@@ -682,12 +693,12 @@ msgstr "बंद"
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_tag__color
 msgid "Color"
-msgstr ""
+msgstr "कलर"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.opt_blog_post_regular_cover
 msgid "Comment"
-msgstr ""
+msgstr "टिप्पणी"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.opt_blog_post_regular_cover
@@ -706,7 +717,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__content
 #: model_terms:ir.ui.view,arch_db:website_blog.view_blog_post_search
 msgid "Content"
-msgstr ""
+msgstr "कॉन्टेंट"
 
 #. module: website_blog
 #: model_terms:blog.post,content:website_blog.blog_post_1
@@ -725,7 +736,7 @@ msgstr ""
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
 msgid "Cover"
-msgstr ""
+msgstr "कवर"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__cover_properties
@@ -747,7 +758,7 @@ msgstr "द्वारा निर्मित"
 #: model:ir.model.fields,field_description:website_blog.field_blog_tag__create_date
 #: model:ir.model.fields,field_description:website_blog.field_blog_tag_category__create_date
 msgid "Created on"
-msgstr ""
+msgstr "इस तारीख को बनाया गया"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.s_dynamic_snippet_options_template
@@ -780,7 +791,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_blog.field_blog_tag__display_name
 #: model:ir.model.fields,field_description:website_blog.field_blog_tag_category__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "डिस्प्ले नाम"
 
 #. module: website_blog
 #: model_terms:blog.post,content:website_blog.blog_post_2
@@ -854,19 +865,19 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_blog.opt_sidebar_blog_index_follow_us
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
 msgid "Follow Us"
-msgstr ""
+msgstr "हमें फ़ॉलो करें"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__message_follower_ids
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__message_follower_ids
 msgid "Followers"
-msgstr ""
+msgstr "फ़ॉलोवर"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__message_partner_ids
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__message_partner_ids
 msgid "Followers (Partners)"
-msgstr ""
+msgstr "फ़ॉलोवर (पार्टनर)"
 
 #. module: website_blog
 #: model_terms:blog.post,content:website_blog.blog_post_4
@@ -921,18 +932,18 @@ msgstr ""
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
 msgid "Grid"
-msgstr ""
+msgstr "ग्रिड"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.view_blog_post_search
 msgid "Group By"
-msgstr ""
+msgstr "इन्होंने ग्रुप किया"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__has_message
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__has_message
 msgid "Has Message"
-msgstr ""
+msgstr "मैसेज है"
 
 #. module: website_blog
 #: model_terms:blog.post,content:website_blog.blog_post_3
@@ -980,13 +991,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_blog.field_blog_tag__id
 #: model:ir.model.fields,field_description:website_blog.field_blog_tag_category__id
 msgid "ID"
-msgstr ""
+msgstr "आईडी"
 
 #. module: website_blog
 #: model:ir.model.fields,help:website_blog.field_blog_blog__message_needaction
 #: model:ir.model.fields,help:website_blog.field_blog_post__message_needaction
 msgid "If checked, new messages require your attention."
-msgstr ""
+msgstr "अगर यह बॉक्स चेक है, तो नए मैसेज देखने ज़रूरी हैं."
 
 #. module: website_blog
 #: model:ir.model.fields,help:website_blog.field_blog_blog__message_has_error
@@ -994,7 +1005,7 @@ msgstr ""
 #: model:ir.model.fields,help:website_blog.field_blog_post__message_has_error
 #: model:ir.model.fields,help:website_blog.field_blog_post__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr ""
+msgstr "अगर बॉक्स पर टिक है, तो कुछ मैसेज भेजने में गलती हुई है."
 
 #. module: website_blog
 #: model_terms:blog.post,content:website_blog.blog_post_3
@@ -1017,7 +1028,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_blog.dynamic_filter_template_blog_post_card
 #: model_terms:ir.ui.view,arch_db:website_blog.dynamic_filter_template_blog_post_horizontal
 msgid "In"
-msgstr ""
+msgstr "इन"
 
 #. module: website_blog
 #: model_terms:blog.post,content:website_blog.blog_post_6
@@ -1037,12 +1048,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__message_is_follower
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__message_is_follower
 msgid "Is Follower"
-msgstr ""
+msgstr "फ़ॉलोवर है"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__is_published
 msgid "Is Published"
-msgstr ""
+msgstr "पब्लिश है"
 
 #. module: website_blog
 #. odoo-python
@@ -1107,7 +1118,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website_blog/static/src/js/options.js:0
 msgid "Large"
-msgstr ""
+msgstr "बड़ा"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__write_uid
@@ -1120,7 +1131,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_blog.field_blog_tag__write_uid
 #: model:ir.model.fields,field_description:website_blog.field_blog_tag_category__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "इन्होंने आखिरी बार अपडेट किया"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__write_date
@@ -1128,7 +1139,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_blog.field_blog_tag__write_date
 #: model:ir.model.fields,field_description:website_blog.field_blog_tag_category__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "आखिरी बार अपडेट हुआ"
 
 #. module: website_blog
 #: model:website.snippet.filter,name:website_blog.dynamic_filter_latest_blog_posts
@@ -1176,7 +1187,7 @@ msgstr ""
 #. module: website_blog
 #: model_terms:blog.post,content:website_blog.blog_post_3
 msgid "Location"
-msgstr ""
+msgstr "जगह"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.s_dynamic_snippet_options_template
@@ -1222,13 +1233,13 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website_blog/static/src/js/options.js:0
 msgid "Medium"
-msgstr ""
+msgstr "मीडियम"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__message_has_error
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__message_has_error
 msgid "Message Delivery error"
-msgstr ""
+msgstr "मैसेज डिलीवरी में गड़बड़ी"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__message_ids
@@ -1328,7 +1339,7 @@ msgstr ""
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.s_dynamic_snippet_options_template
 msgid "None"
-msgstr ""
+msgstr "कोई नहीं"
 
 #. module: website_blog
 #: model_terms:blog.post,content:website_blog.blog_post_4
@@ -1367,25 +1378,25 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__message_needaction_counter
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__message_needaction_counter
 msgid "Number of Actions"
-msgstr ""
+msgstr "कार्रवाई की संख्या"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__message_has_error_counter
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__message_has_error_counter
 msgid "Number of errors"
-msgstr ""
+msgstr "गलतियों की संख्या"
 
 #. module: website_blog
 #: model:ir.model.fields,help:website_blog.field_blog_blog__message_needaction_counter
 #: model:ir.model.fields,help:website_blog.field_blog_post__message_needaction_counter
 msgid "Number of messages requiring action"
-msgstr ""
+msgstr "ऐसे मैसेज की संख्या जिनपर कार्रवाई करना ज़रूरी है"
 
 #. module: website_blog
 #: model:ir.model.fields,help:website_blog.field_blog_blog__message_has_error_counter
 #: model:ir.model.fields,help:website_blog.field_blog_post__message_has_error_counter
 msgid "Number of messages with delivery error"
-msgstr ""
+msgstr "ऐसे मैसेज की संख्या जिनमें डिलीवरी की गड़बड़ी है"
 
 #. module: website_blog
 #: model_terms:blog.post,content:website_blog.blog_post_7
@@ -1409,7 +1420,7 @@ msgstr ""
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.opt_sidebar_blog_index_tags
 msgid "Others"
-msgstr ""
+msgstr "अन्य"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.opt_blog_cover_post
@@ -1486,7 +1497,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__blog_post_count
 #: model:ir.model.fields,field_description:website_blog.field_blog_tag__post_ids
 msgid "Posts"
-msgstr ""
+msgstr "पोस्ट"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
@@ -1501,7 +1512,7 @@ msgstr ""
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.blog_post_view_kanban
 msgid "Published"
-msgstr ""
+msgstr "प्रकाशित"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.posts_loop
@@ -1533,7 +1544,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__rating_ids
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__rating_ids
 msgid "Ratings"
-msgstr ""
+msgstr "रेटिंग"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.posts_loop
@@ -1554,7 +1565,7 @@ msgstr ""
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.view_blog_post_form
 msgid "SEO"
-msgstr ""
+msgstr "एसईओ"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__is_seo_optimized
@@ -1567,7 +1578,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__message_has_sms_error
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__message_has_sms_error
 msgid "SMS Delivery error"
-msgstr ""
+msgstr "एसएमएस डिलीवरी में गड़बड़ी"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.dynamic_filter_template_blog_post_big_picture
@@ -1575,7 +1586,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_blog.dynamic_filter_template_blog_post_horizontal
 #: model_terms:ir.ui.view,arch_db:website_blog.dynamic_filter_template_blog_post_list
 msgid "Sample"
-msgstr ""
+msgstr "सैंपल"
 
 #. module: website_blog
 #. odoo-python
@@ -1657,7 +1668,7 @@ msgstr ""
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
 msgid "Share Links"
-msgstr ""
+msgstr "लिंक शेयर करें"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.opt_blog_post_share_links_display
@@ -1784,7 +1795,7 @@ msgstr ""
 #. module: website_blog
 #: model_terms:blog.post,content:website_blog.blog_post_3
 msgid "Style"
-msgstr ""
+msgstr "स्टाइल"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__subtitle
@@ -1797,7 +1808,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_blog.opt_blog_post_read_next
 #: model_terms:ir.ui.view,arch_db:website_blog.opt_blog_post_regular_cover
 msgid "Subtitle"
-msgstr ""
+msgstr "सबटाइटल"
 
 #. module: website_blog
 #: model:ir.ui.menu,name:website_blog.menu_website_blog_tag_category_global
@@ -1833,7 +1844,7 @@ msgstr ""
 #. module: website_blog
 #: model:ir.model.constraint,message:website_blog.constraint_blog_tag_name_uniq
 msgid "Tag name already exists!"
-msgstr ""
+msgstr "टैग नाम पहले से ही मौजूद है!"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__tag_ids
@@ -2041,7 +2052,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__name
 #: model_terms:ir.ui.view,arch_db:website_blog.opt_blog_post_regular_cover
 msgid "Title"
-msgstr ""
+msgstr "टाइटल"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
@@ -2116,7 +2127,7 @@ msgstr ""
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.opt_blog_post_share_links_display
 msgid "Twitter"
-msgstr ""
+msgstr "Twitter"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.posts_loop
@@ -2148,7 +2159,7 @@ msgstr ""
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.post_info
 msgid "Views"
-msgstr ""
+msgstr "डेटा देखने का तरीका"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.index
@@ -2158,7 +2169,7 @@ msgstr ""
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__website_published
 msgid "Visible on current website"
-msgstr ""
+msgstr "मौजूदा वेबसाइट पर दिखना"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.blog_post_content
@@ -2170,7 +2181,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__website_id
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__website_id
 msgid "Website"
-msgstr ""
+msgstr "वेबसाइट"
 
 #. module: website_blog
 #: model:ir.actions.act_url,name:website_blog.action_open_website
@@ -2181,7 +2192,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__website_message_ids
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__website_message_ids
 msgid "Website Messages"
-msgstr ""
+msgstr "वेबसाइट मैसेज"
 
 #. module: website_blog
 #: model:ir.model,name:website_blog.model_website_snippet_filter
@@ -2191,34 +2202,34 @@ msgstr ""
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__website_url
 msgid "Website URL"
-msgstr ""
+msgstr "वेबसाइट यूआरएल"
 
 #. module: website_blog
 #: model:ir.model.fields,help:website_blog.field_blog_blog__website_message_ids
 #: model:ir.model.fields,help:website_blog.field_blog_post__website_message_ids
 msgid "Website communication history"
-msgstr ""
+msgstr "वेबसाइट कम्यूनिकेशन हिस्ट्री"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__website_meta_description
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__website_meta_description
 #: model:ir.model.fields,field_description:website_blog.field_blog_tag__website_meta_description
 msgid "Website meta description"
-msgstr ""
+msgstr "वेबसाइट पर मेटा की जानकारी"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__website_meta_keywords
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__website_meta_keywords
 #: model:ir.model.fields,field_description:website_blog.field_blog_tag__website_meta_keywords
 msgid "Website meta keywords"
-msgstr ""
+msgstr "वेबसाइट पर मेटा कीवर्ड"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__website_meta_title
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__website_meta_title
 #: model:ir.model.fields,field_description:website_blog.field_blog_tag__website_meta_title
 msgid "Website meta title"
-msgstr ""
+msgstr "वेबसाइट पर मेटा टाइटल"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__website_meta_og_img
@@ -2322,7 +2333,7 @@ msgstr ""
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.blog_post_content
 msgid "in"
-msgstr ""
+msgstr " "
 
 #. module: website_blog
 #: model:blog.tag,name:website_blog.blog_tag_4

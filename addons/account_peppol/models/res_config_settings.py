@@ -102,7 +102,7 @@ class ResConfigSettings(models.TransientModel):
         The migration key is then displayed in Peppol settings.
         Currently, reopening after migrating away is not supported.
         """
-        raise UserError(_("This feature is deprecated. Contact odoo support if you need a migration key."))
+        raise UserError(_("This feature is deprecated. Contact Odoo support if you need a migration key."))
 
     @handle_demo
     def button_deregister_peppol_participant(self):
@@ -115,6 +115,9 @@ class ResConfigSettings(models.TransientModel):
             self.account_peppol_edi_user._peppol_deregister_participant()
         return True
 
+    # Note: Deprecated; the button is permanently invisible.
+    # Disabling services can lead to complicance issues and is not necessary
+    # since all existing services should just work.
     def button_account_peppol_configure_services(self):
         wizard = self.env['account_peppol.service.wizard'].create({
             'edi_user_id': self.account_peppol_edi_user.id,

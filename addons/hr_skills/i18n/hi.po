@@ -1,32 +1,36 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* hr_skills
-# 
+# * hr_skills
+#
 # Translators:
 # Martin Trigaux, 2024
 # Wil Odoo, 2024
 # Ronald Kung, 2025
 # Manav Shah, 2025
-# 
+# Ujjawal Pathak, 2025
+#
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-25 08:39+0000\n"
-"PO-Revision-Date: 2024-09-25 09:41+0000\n"
-"Last-Translator: Manav Shah, 2025\n"
-"Language-Team: Hindi (https://app.transifex.com/odoo/teams/41243/hi/)\n"
+"PO-Revision-Date: 2025-11-21 02:29+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Hindi <https://translate.odoo.com/projects/odoo-18/hr_skills/"
+"hi/>\n"
+"Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: hi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 5.12.2\n"
 
 #. module: hr_skills
 #. odoo-python
 #: code:addons/hr_skills/models/hr_skill_type.py:0
 msgid "%s (copy)"
-msgstr ""
+msgstr "%s (कॉपी)"
 
 #. module: hr_skills
 #: model:ir.actions.report,print_report_name:hr_skills.action_report_employee_cv
@@ -69,7 +73,7 @@ msgstr "सक्रिय"
 #. module: hr_skills
 #: model:hr.skill,name:hr_skills.hr_skill_adaptability
 msgid "Adaptability"
-msgstr ""
+msgstr "अनुकूलनशीलता"
 
 #. module: hr_skills
 #: model:hr.skill,name:hr_skills.hr_skill_agile_scrum
@@ -97,7 +101,7 @@ msgstr ""
 #. module: hr_skills
 #: model:hr.skill,name:hr_skills.hr_skill_analytics
 msgid "Analytics"
-msgstr ""
+msgstr "एनालिटिक्स"
 
 #. module: hr_skills
 #: model:hr.skill,name:hr_skills.hr_skill_android
@@ -124,7 +128,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:hr_skills.hr_employee_skill_type_view_form
 #: model_terms:ir.ui.view,arch_db:hr_skills.hr_skill_type_view_search
 msgid "Archived"
-msgstr ""
+msgstr "संग्रहीत किया गया"
 
 #. module: hr_skills
 #: model:hr.resume.line,name:hr_skills.employee_resume_ngh_armidale_city_public_school
@@ -245,7 +249,7 @@ msgstr ""
 #. module: hr_skills
 #: model:ir.model.fields.selection,name:hr_skills.selection__hr_resume_line__display_type__classic
 msgid "Classic"
-msgstr ""
+msgstr "क्लासिक"
 
 #. module: hr_skills
 #: model:hr.skill,name:hr_skills.hr_skill_cloud_computing
@@ -262,7 +266,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_skills.field_hr_skill__color
 #: model:ir.model.fields,field_description:hr_skills.field_hr_skill_type__color
 msgid "Color"
-msgstr ""
+msgstr "कलर"
 
 #. module: hr_skills
 #: model_terms:ir.ui.view,arch_db:hr_skills.hr_employee_cv_wizard_view_form
@@ -273,7 +277,7 @@ msgstr ""
 #: model:hr.skill,name:hr_skills.hr_skill_com
 #: model:hr.skill,name:hr_skills.hr_skill_communication
 msgid "Communication"
-msgstr ""
+msgstr "कम्यूनिकेशन "
 
 #. module: hr_skills
 #: model:ir.model.fields,field_description:hr_skills.field_hr_employee_skill_report__company_id
@@ -293,7 +297,7 @@ msgstr ""
 #. module: hr_skills
 #: model:ir.model.fields,field_description:hr_skills.field_hr_employee_cv_wizard__show_contact
 msgid "Contact Information"
-msgstr ""
+msgstr "संपर्क जानकारी"
 
 #. module: hr_skills
 #: model_terms:hr.resume.line,description:hr_skills.employee_resume_stw_finley_rowe_and_adams
@@ -339,12 +343,12 @@ msgstr "द्वारा निर्मित"
 #: model:ir.model.fields,field_description:hr_skills.field_hr_skill_level__create_date
 #: model:ir.model.fields,field_description:hr_skills.field_hr_skill_type__create_date
 msgid "Created on"
-msgstr ""
+msgstr "इस तारीख को बनाया गया"
 
 #. module: hr_skills
 #: model:hr.skill,name:hr_skills.hr_skill_creativity
 msgid "Creativity"
-msgstr ""
+msgstr "क्रिएटिविटी"
 
 #. module: hr_skills
 #: model:hr.skill,name:hr_skills.hr_skill_critical_thinking
@@ -355,7 +359,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/hr_skills/static/src/fields/resume_one2many/resume_one2many.xml:0
 msgid "Current"
-msgstr ""
+msgstr "करंट"
 
 #. module: hr_skills
 #: model_terms:hr.resume.line,description:hr_skills.employee_resume_jep_davis_sanchez_and_miller
@@ -365,7 +369,7 @@ msgstr ""
 #. module: hr_skills
 #: model:hr.skill,name:hr_skills.hr_skill_cybersecurity
 msgid "Cybersecurity"
-msgstr ""
+msgstr "साइबरसिक्योरिटी"
 
 #. module: hr_skills
 #: model:hr.resume.line,name:hr_skills.employee_resume_hne_dandenong_north_primary_school
@@ -401,7 +405,7 @@ msgstr ""
 #. module: hr_skills
 #: model:ir.model.fields,field_description:hr_skills.field_hr_resume_line__date_start
 msgid "Date Start"
-msgstr ""
+msgstr "शुरू होने की तारीख"
 
 #. module: hr_skills
 #: model:hr.resume.line,name:hr_skills.employee_resume_chs_davis_plc
@@ -470,12 +474,12 @@ msgstr ""
 #. module: hr_skills
 #: model_terms:ir.ui.view,arch_db:hr_skills.hr_employee_cv_wizard_view_form
 msgid "Discard"
-msgstr ""
+msgstr "खारिज करें"
 
 #. module: hr_skills
 #: model_terms:ir.ui.view,arch_db:hr_skills.hr_employee_skill_type_view_form
 msgid "Display"
-msgstr ""
+msgstr "डिस्प्ले"
 
 #. module: hr_skills
 #: model:ir.model.fields,field_description:hr_skills.field_hr_employee_cv_wizard__display_name
@@ -487,12 +491,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_skills.field_hr_skill_level__display_name
 #: model:ir.model.fields,field_description:hr_skills.field_hr_skill_type__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "डिस्प्ले नाम"
 
 #. module: hr_skills
 #: model:ir.model.fields,field_description:hr_skills.field_hr_resume_line__display_type
 msgid "Display Type"
-msgstr ""
+msgstr "डिस्प्ले टाइप"
 
 #. module: hr_skills
 #: model:hr.skill,name:hr_skills.hr_skill_django
@@ -512,7 +516,7 @@ msgstr "अवधि"
 #. module: hr_skills
 #: model:hr.resume.line.type,name:hr_skills.resume_type_education
 msgid "Education"
-msgstr ""
+msgstr "शिक्षा"
 
 #. module: hr_skills
 #: model:hr.resume.line,name:hr_skills.employee_resume_jve_ellinbank_primary_school
@@ -527,7 +531,7 @@ msgstr ""
 #. module: hr_skills
 #: model:hr.skill,name:hr_skills.hr_skill_email
 msgid "Email Marketing"
-msgstr ""
+msgstr "ईमेल मार्केटिंग"
 
 #. module: hr_skills
 #: model:ir.model,name:hr_skills.model_hr_employee
@@ -544,7 +548,7 @@ msgstr "कर्मचारी"
 #. module: hr_skills
 #: model:ir.model.fields,field_description:hr_skills.field_hr_employee_skill_report__display_name
 msgid "Employee Name"
-msgstr ""
+msgstr "कर्मचारी का नाम"
 
 #. module: hr_skills
 #: model:ir.actions.report,name:hr_skills.action_report_employee_cv
@@ -555,7 +559,7 @@ msgstr ""
 #. module: hr_skills
 #: model:ir.actions.act_window,name:hr_skills.hr_employee_skill_report_action
 msgid "Employee Skills"
-msgstr ""
+msgstr "इम्प्लॉय स्किल"
 
 #. module: hr_skills
 #: model:ir.model,name:hr_skills.model_hr_employee_skill_report
@@ -665,7 +669,7 @@ msgstr ""
 #. module: hr_skills
 #: model:hr.skill,name:hr_skills.hr_skill_french
 msgid "French"
-msgstr ""
+msgstr "फ़्रेंच"
 
 #. module: hr_skills
 #: model:hr.resume.line,name:hr_skills.employee_resume_jgo_galilee_catholic_school
@@ -700,7 +704,7 @@ msgstr ""
 #. module: hr_skills
 #: model:hr.skill,name:hr_skills.hr_skill_german
 msgid "German"
-msgstr ""
+msgstr "जर्मन"
 
 #. module: hr_skills
 #: model_terms:hr.resume.line,description:hr_skills.employee_resume_lur_ramirez_inc
@@ -732,7 +736,7 @@ msgstr ""
 #. module: hr_skills
 #: model_terms:ir.ui.view,arch_db:hr_skills.hr_employee_skill_log_view_search
 msgid "Group By"
-msgstr ""
+msgstr "इन्होंने ग्रुप किया"
 
 #. module: hr_skills
 #: model_terms:ir.ui.view,arch_db:hr_skills.hr_skill_view_search
@@ -762,7 +766,7 @@ msgstr ""
 #. module: hr_skills
 #: model:ir.model.fields,field_description:hr_skills.field_hr_employee_skill_report__has_department_manager_access
 msgid "Has Department Manager Access"
-msgstr ""
+msgstr "विभाग मैनेजर ऐक्सेस रखता है"
 
 #. module: hr_skills
 #: model_terms:hr.resume.line,description:hr_skills.employee_resume_jve_davis_and_sons
@@ -815,12 +819,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_skills.field_hr_skill_level__id
 #: model:ir.model.fields,field_description:hr_skills.field_hr_skill_type__id
 msgid "ID"
-msgstr ""
+msgstr "आईडी"
 
 #. module: hr_skills
 #: model:hr.skill.type,name:hr_skills.hr_skill_type_it
 msgid "IT"
-msgstr ""
+msgstr "आईटी"
 
 #. module: hr_skills
 #: model:hr.skill,name:hr_skills.hr_skill_it_governance_compliance
@@ -871,6 +875,8 @@ msgid ""
 "If the active field is set to False, it will allow you to hide the resource "
 "record without removing it."
 msgstr ""
+"अगर सक्रिय फ़ील्ड को 'गलत' पर सेट किया जाता है, तो यह आपको रिसोर्स रिकॉर्ड को हटाए "
+"बिना छिपाने की अनुमति देगा।"
 
 #. module: hr_skills
 #: model:hr.skill,name:hr_skills.hr_skill_indonesian
@@ -974,7 +980,7 @@ msgstr ""
 #: model:hr.skill.type,name:hr_skills.hr_skill_type_lang
 #: model_terms:ir.ui.view,arch_db:hr_skills.report_employee_cv_main_panel
 msgid "Languages"
-msgstr ""
+msgstr "भाषा"
 
 #. module: hr_skills
 #: model:ir.model.fields,field_description:hr_skills.field_hr_employee_cv_wizard__write_uid
@@ -986,7 +992,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_skills.field_hr_skill_level__write_uid
 #: model:ir.model.fields,field_description:hr_skills.field_hr_skill_type__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "इन्होंने आखिरी बार अपडेट किया"
 
 #. module: hr_skills
 #: model:ir.model.fields,field_description:hr_skills.field_hr_employee_cv_wizard__write_date
@@ -998,7 +1004,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_skills.field_hr_skill_level__write_date
 #: model:ir.model.fields,field_description:hr_skills.field_hr_skill_type__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "आखिरी बार अपडेट हुआ"
 
 #. module: hr_skills
 #: model:hr.resume.line,name:hr_skills.employee_resume_jep_lawson_public_school
@@ -1008,7 +1014,7 @@ msgstr ""
 #. module: hr_skills
 #: model:hr.skill,name:hr_skills.hr_skill_leadership
 msgid "Leadership"
-msgstr ""
+msgstr "लीडरशिप"
 
 #. module: hr_skills
 #: model_terms:hr.resume.line,description:hr_skills.employee_resume_vad_gallegos_little_and_walters
@@ -1029,7 +1035,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_skills.field_hr_skill_type__skill_level_ids
 #: model_terms:ir.ui.view,arch_db:hr_skills.hr_employee_skill_type_view_form
 msgid "Levels"
-msgstr ""
+msgstr "लेवल"
 
 #. module: hr_skills
 #: model:hr.resume.line,name:hr_skills.employee_resume_fme_lewis_group
@@ -1064,7 +1070,7 @@ msgstr ""
 #. module: hr_skills
 #: model_terms:ir.ui.view,arch_db:hr_skills.report_employee_cv_company
 msgid "Logo"
-msgstr ""
+msgstr "लोगो"
 
 #. module: hr_skills
 #: model:hr.resume.line,name:hr_skills.employee_resume_stw_lynchhodges
@@ -1104,12 +1110,12 @@ msgstr ""
 #. module: hr_skills
 #: model_terms:ir.ui.view,arch_db:hr_skills.report_employee_cv_sidepanel
 msgid "Marc Demo"
-msgstr ""
+msgstr "मार्क डेमो"
 
 #. module: hr_skills
 #: model:hr.skill.type,name:hr_skills.hr_skill_type_marketing
 msgid "Marketing"
-msgstr ""
+msgstr "मार्केटिंग"
 
 #. module: hr_skills
 #: model:hr.resume.line,name:hr_skills.employee_resume_jgo_martin_stanley_and_duncan
@@ -1211,7 +1217,7 @@ msgstr ""
 #. module: hr_skills
 #: model:hr.resume.line,name:hr_skills.employee_resume_line_admin_4
 msgid "Odoo SA"
-msgstr ""
+msgstr "Odoo SA"
 
 #. module: hr_skills
 #: model:hr.skill,name:hr_skills.hr_skill_openness_to_criticism
@@ -1229,12 +1235,12 @@ msgstr ""
 #: code:addons/hr_skills/report/hr_employee_cv_report.py:0
 #: code:addons/hr_skills/static/src/views/skills_list_renderer.js:0
 msgid "Other"
-msgstr ""
+msgstr "अन्य"
 
 #. module: hr_skills
 #: model:ir.model.fields,field_description:hr_skills.field_hr_employee_cv_wizard__show_others
 msgid "Others"
-msgstr ""
+msgstr "अन्य"
 
 #. module: hr_skills
 #: model:hr.resume.line,name:hr_skills.employee_resume_fpi_our_lady_star_of_the_sea_school
@@ -1315,7 +1321,7 @@ msgstr ""
 #. module: hr_skills
 #: model_terms:ir.ui.view,arch_db:hr_skills.report_employee_cv_main_panel
 msgid "Present"
-msgstr ""
+msgstr "उपस्थित"
 
 #. module: hr_skills
 #: model:ir.model.fields,field_description:hr_skills.field_hr_employee_cv_wizard__color_primary
@@ -1340,7 +1346,7 @@ msgstr ""
 #. module: hr_skills
 #: model:hr.skill,name:hr_skills.hr_skill_problem_solving
 msgid "Problem-Solving"
-msgstr ""
+msgstr "प्रॉब्लम - सॉल्विंग"
 
 #. module: hr_skills
 #: model:hr.skill.type,name:hr_skills.hr_skill_type_dev
@@ -1352,7 +1358,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_skills.field_hr_employee_skill_log__level_progress
 #: model:ir.model.fields,field_description:hr_skills.field_hr_skill_level__level_progress
 msgid "Progress"
-msgstr ""
+msgstr "प्रगति देखने की सुविधा"
 
 #. module: hr_skills
 #: model_terms:ir.ui.view,arch_db:hr_skills.employee_skill_level_view_form
@@ -1362,7 +1368,7 @@ msgstr ""
 #. module: hr_skills
 #: model_terms:ir.ui.view,arch_db:hr_skills.report_employee_cv_main_panel
 msgid "Progress bar"
-msgstr ""
+msgstr "प्रोग्रेस बार"
 
 #. module: hr_skills
 #: model:ir.model.fields,help:hr_skills.field_hr_employee_skill__level_progress
@@ -1379,7 +1385,7 @@ msgstr ""
 #. module: hr_skills
 #: model:hr.skill,name:hr_skills.hr_skill_project_management
 msgid "Project Management"
-msgstr ""
+msgstr "प्रोजेक्ट मैनेजमेंट"
 
 #. module: hr_skills
 #: model_terms:hr.resume.line,description:hr_skills.employee_resume_mit_robinson_crawford_and_norman
@@ -1389,7 +1395,7 @@ msgstr ""
 #. module: hr_skills
 #: model:ir.model,name:hr_skills.model_hr_employee_public
 msgid "Public Employee"
-msgstr ""
+msgstr "सार्वजनिक कर्मचारी"
 
 #. module: hr_skills
 #: model:hr.skill,name:hr_skills.hr_skill_public
@@ -1435,7 +1441,7 @@ msgstr ""
 #. module: hr_skills
 #: model:ir.model,name:hr_skills.model_resource_resource
 msgid "Resources"
-msgstr ""
+msgstr "संसाधन"
 
 #. module: hr_skills
 #: model:ir.ui.menu,name:hr_skills.menu_human_resources_configuration_resume
@@ -1446,7 +1452,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:hr_skills.res_users_view_form
 #: model_terms:ir.ui.view,arch_db:hr_skills.resume_line_view_form
 msgid "Resume"
-msgstr ""
+msgstr "फिर शुरू करें"
 
 #. module: hr_skills
 #. odoo-python
@@ -1540,7 +1546,7 @@ msgstr ""
 #. module: hr_skills
 #: model_terms:ir.ui.view,arch_db:hr_skills.hr_employee_skill_log_view_search
 msgid "Search Logs"
-msgstr ""
+msgstr "सर्च लॉग"
 
 #. module: hr_skills
 #: model_terms:ir.ui.view,arch_db:hr_skills.hr_skill_view_search
@@ -1678,7 +1684,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:hr_skills.hr_skill_view_form
 #: model_terms:ir.ui.view,arch_db:hr_skills.report_employee_cv_main_panel
 msgid "Skills"
-msgstr ""
+msgstr "स्किल"
 
 #. module: hr_skills
 #: model:ir.model,name:hr_skills.model_hr_employee_skill_log
@@ -1693,7 +1699,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/hr_skills/static/src/fields/skills_one2many/skills_one2many.js:0
 msgid "Skills Report"
-msgstr ""
+msgstr "स्किल रिपोर्ट"
 
 #. module: hr_skills
 #: model:hr.resume.line.type,name:hr_skills.resume_type_social_media
@@ -1703,7 +1709,7 @@ msgstr ""
 #. module: hr_skills
 #: model:hr.skill.type,name:hr_skills.hr_skill_type_softskill
 msgid "Soft Skills"
-msgstr ""
+msgstr "सॉफ़्ट स्किल"
 
 #. module: hr_skills
 #: model_terms:ir.ui.view,arch_db:hr_skills.report_employee_cv_main_panel
@@ -1811,7 +1817,7 @@ msgstr ""
 #. module: hr_skills
 #: model:ir.model.constraint,message:hr_skills.constraint_hr_resume_line_date_check
 msgid "The start date must be anterior to the end date."
-msgstr ""
+msgstr "शुरुआत की तारीख अंत की तारीख से पहले होनी चाहिए।"
 
 #. module: hr_skills
 #: model_terms:hr.resume.line,description:hr_skills.employee_resume_qdp_evans_cooper_and_white
@@ -1858,7 +1864,7 @@ msgstr ""
 #. module: hr_skills
 #: model_terms:ir.ui.view,arch_db:hr_skills.resume_line_view_form
 msgid "Title"
-msgstr ""
+msgstr "टाइटल"
 
 #. module: hr_skills
 #: model:hr.resume.line,name:hr_skills.employee_resume_jgo_tottenham_central_school

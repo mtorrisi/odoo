@@ -232,10 +232,10 @@ class ResUsers(models.Model):
                     mail.send()
             if signup_type == 'reset':
                 _logger.info("Password reset email sent for user <%s> to <%s>", user.login, user.email)
-                message = _('A reset password link was send by email')
+                message = _('A reset password link was sent by email')
             else:
                 _logger.info("Signup email sent for user <%s> to <%s>", user.login, user.email)
-                message = _('A signup link was send by email')
+                message = _('A signup link was sent by email')
         return {
             'type': 'ir.actions.client',
             'tag': 'display_notification',
@@ -250,7 +250,7 @@ class ResUsers(models.Model):
         email_template = self.env.ref('auth_signup.mail_template_data_unregistered_users', raise_if_not_found=False)
         if not email_template:
             _logger.warning("Template 'auth_signup.mail_template_data_unregistered_users' was not found. Cannot send reminder notifications.")
-            self.env['ir.cron']._commit_progress(deactivate=True)
+            self.env['ir.cron']._notify_progress(deactivate=True)
             return
         datetime_min = fields.Datetime.today() - relativedelta(days=after_days)
         datetime_max = datetime_min + relativedelta(days=1)

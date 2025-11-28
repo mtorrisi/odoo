@@ -1037,11 +1037,16 @@ class IrModelFields(models.Model):
                 if relation and not IrModel._get_id(relation):
                     raise UserError(_("Model %s does not exist!", vals['relation']))
 
-                if vals.get('ttype') == 'one2many' and not self.search_count([
-                    ('ttype', '=', 'many2one'),
-                    ('model', '=', vals['relation']),
-                    ('name', '=', vals['relation_field']),
-                ]):
+                if (
+                    vals.get('ttype') == 'one2many' and
+                    vals.get("store", True) and
+                    not vals.get("related") and
+                    not self.search_count([
+                        ('ttype', '=', 'many2one'),
+                        ('model', '=', vals['relation']),
+                        ('name', '=', vals['relation_field']),
+                    ])
+                ):
                     raise UserError(_("Many2one %(field)s on model %(model)s does not exist!", field=vals['relation_field'], model=vals['relation']))
 
         if any(model in self.pool for model in models):
@@ -2470,7 +2475,7 @@ class IrModelData(models.Model):
                     else:
                         # the field is shared across registries; don't modify it
                         Field = type(field)
-                        field_ = Field(_base_fields=[field, Field(prefetch=False)])
+                        field_ = Field(_base_fields=(field, Field(prefetch=False)))
                         self.env[ir_field.model]._add_field(ir_field.name, field_)
                         field_.setup(model)
                         has_shared_field = True

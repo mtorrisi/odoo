@@ -1,23 +1,28 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* project_todo
-# 
+# * project_todo
+#
 # Translators:
 # Wil Odoo, 2024
-# 
+# Aleš Pipan, 2025
+#
+# Jan Zorko <jan.zorko@implex.si>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-25 08:39+0000\n"
-"PO-Revision-Date: 2024-09-25 09:41+0000\n"
-"Last-Translator: Wil Odoo, 2024\n"
-"Language-Team: Slovenian (https://app.transifex.com/odoo/teams/41243/sl/)\n"
+"PO-Revision-Date: 2025-11-07 15:23+0000\n"
+"Last-Translator: Jan Zorko <jan.zorko@implex.si>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-18/"
+"project_todo/sl/>\n"
+"Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: sl\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 5.12.2\n"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.todo_user_onboarding
@@ -34,6 +39,10 @@ msgid ""
 "                    (/<span style=\"font-style: italic;\">checklist</span>)\n"
 "                </span>"
 msgstr ""
+"<span style=\"font-size: 14px;\">\n"
+"                    Dodaj kontrolni seznam\n"
+"                    (/<span style=\"font-style: italic;\">kontrolni seznam</span>)\n"
+"                </span>"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.todo_user_onboarding
@@ -43,6 +52,10 @@ msgid ""
 "                    (/<span style=\"font-style: italic;\">separator</span>)\n"
 "                </span>"
 msgstr ""
+"<span style=\"font-size: 14px;\">\n"
+"                    Dodaj ločilo\n"
+"                    (/<span style=\"font-style: italic;\">ločilo</span>)\n"
+"                </span>"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.todo_user_onboarding
@@ -53,6 +66,11 @@ msgid ""
 "                    to convert a text into a title\n"
 "                </span>"
 msgstr ""
+"<span style=\"font-size: 14px;\">\n"
+"                    Uporabite\n"
+"                    /<span style=\"font-style: italic;\">naslov</span>\n"
+"                    za pretvorbo besedila v naslov\n"
+"                </span>"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.todo_user_onboarding
@@ -176,6 +194,8 @@ msgstr ""
 msgid ""
 "<span style=\"font-size: 14px;\">Press Ctrl+Z/⌘+Z to undo any change</span>"
 msgstr ""
+"<span style=\"font-size: 14px;\">Pritisnite Ctrl+Z/⌘+Z, da razveljavite "
+"katero koli spremembo</span>"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.todo_user_onboarding
@@ -239,7 +259,7 @@ msgstr "Zadolžen"
 #: model_terms:ir.ui.view,arch_db:project_todo.project_task_view_todo_form
 #: model_terms:ir.ui.view,arch_db:project_todo.project_task_view_todo_search
 msgid "Assignees"
-msgstr "Udeleženci"
+msgstr "Zadolženi"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.project_task_view_todo_search
@@ -333,7 +353,7 @@ msgstr "Združi po"
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.todo_user_onboarding
 msgid "Hey"
-msgstr ""
+msgstr "Hej"
 
 #. module: project_todo
 #: model:ir.model.fields,field_description:project_todo.field_mail_activity_todo_create__id
@@ -440,7 +460,7 @@ msgstr "Opravilo"
 #. odoo-python
 #: code:addons/project_todo/models/res_users.py:0
 msgid "To-Do"
-msgstr ""
+msgstr "Opravilo"
 
 #. module: project_todo
 #: model:ir.ui.menu,name:project_todo.menu_todo_todos

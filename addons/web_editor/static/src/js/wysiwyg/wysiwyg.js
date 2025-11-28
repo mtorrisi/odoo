@@ -442,6 +442,7 @@ export class Wysiwyg extends Component {
             getUnremovableElements: this.options.getUnremovableElements,
             defaultLinkAttributes: this.options.userGeneratedContent ? {rel: 'ugc' } : {},
             allowCommandVideo: this.options.allowCommandVideo,
+            disableTransform: this.options.disableTransform,
             allowInlineAtRoot: this.options.allowInlineAtRoot,
             getYoutubeVideoElement: getYoutubeVideoElement,
             getContextFromParentRect: options.getContextFromParentRect,
@@ -650,6 +651,9 @@ export class Wysiwyg extends Component {
             this.snippetsMenuComponent = await this.getSnippetsMenuClass(options);
             await this._insertSnippetMenu();
             $(this.odooEditor.document.body).addClass('editor_enable');
+            if (localization.direction === "rtl") {
+                this.odooEditor.document.body.setAttribute("is-rtl-backend", "true");
+            }
 
             this._onBeforeUnload = (event) => {
                 if (this.isDirty()) {
@@ -1343,6 +1347,10 @@ export class Wysiwyg extends Component {
                         node.classList.remove(...this.odooEditor.options.renderingClasses);
                     }
                     const html = $(fieldNodeClone).html();
+                    // Prevent recording unnecessary mutations (especially in the header,
+                    // where multiple observers are used to synchronize desktop and mobile views)
+                    // while clearing the uncommitted draft.
+                    this.odooEditor.observerUnactive("undo_redo_header");
                     this.odooEditor.withoutRollback(() => {
                         for (const node of $nodes) {
                             if (node.classList.contains('o_translation_without_style')) {
@@ -1360,6 +1368,7 @@ export class Wysiwyg extends Component {
                             }
                         }
                     });
+                    this.odooEditor.observerActive("undo_redo_header");
                     this._observeOdooFieldChanges();
                 });
                 observer.observe(field, observerOptions);
@@ -1794,13 +1803,43 @@ export class Wysiwyg extends Component {
      * @param {Object} params binded @see openMediaDialog
      * @param {Element} element provided by the dialog
      */
-    _onMediaDialogSave(params, element) {
+    async _onMediaDialogSave(params, element) {
         params.restoreSelection();
         if (!element) {
             return;
         }
 
+        const saveCallback = this.state.showSnippetsMenu
+            ? async element => {
+                const $element = $(element);
+                // Make sure the newly inserted media's options are built, note:
+                // also enable the overlay on edited existing media.
+                await new Promise(resolve => {
+                    this.snippetsMenuBus.trigger(
+                        params.node ? "ACTIVATE_SNIPPET" : "CALL_POST_SNIPPET_DROP",
+                        {
+                            $snippet: $element,
+                            onSuccess: resolve,
+                        },
+                    );
+                });
+                if (element.tagName !== 'IMG') {
+                    return;
+                }
+                return new Promise(resolve => {
+                    // TODO ideally would need 'snippet_edition_request' ? So
+                    // there could be a loading animation ?
+                    this.mutex.exec(() => {
+                        // TODO In master use a trigger parameter
+                        const event = $.Event("image_changed", {_complete: resolve});
+                        $element.trigger(event);
+                    });
+                });
+            }
+            : () => {};
+
         if (params.node) {
+            this.odooEditor.historyPauseSteps();
             const changedIcon = isIconElement(params.node) && isIconElement(element);
             if (changedIcon) {
                 // Preserve tag name when changing an icon and not recreate the
@@ -1811,6 +1850,8 @@ export class Wysiwyg extends Component {
             } else {
                 params.node.replaceWith(element);
             }
+            await saveCallback(element);
+            this.odooEditor.historyUnpauseSteps();
             this.odooEditor.unbreakableStepUnactive();
 
             if (params.node.matches(".oe_unremovable")) {
@@ -1831,21 +1872,14 @@ export class Wysiwyg extends Component {
             // Refocus again to save updates when calling `_onWysiwygBlur`
             this.odooEditor.editable.focus();
         } else {
+            this.odooEditor.historyPauseSteps();
             const result = this.odooEditor.execCommand('insert', element);
+            await saveCallback(element);
+            this.odooEditor.historyUnpauseSteps();
+            this.odooEditor.historyStep();
             // Refocus again to save updates when calling `_onWysiwygBlur`
             this.odooEditor.editable.focus();
             return result;
-        }
-
-        if (this.state.showSnippetsMenu) {
-            this.snippetsMenuBus.trigger("ACTIVATE_SNIPPET", {
-                $snippet: $(element),
-                onSuccess: () => {
-                    if (element.tagName === 'IMG') {
-                        $(element).trigger('image_changed');
-                    }
-                }
-            });
         }
     }
     getInSelection(selector) {
@@ -3687,17 +3721,24 @@ export class Wysiwyg extends Component {
         // Modifying an image always creates a copy of the original, even if
         // it was modified previously, as the other modified image may be used
         // elsewhere if the snippet was duplicated or was saved as a custom one.
-        newAttachmentSrc = await this._serviceRpc(
-            `/web_editor/modify_image/${encodeURIComponent(el.dataset.originalId)}`,
-            {
-                res_model: resModel,
-                res_id: parseInt(resId),
-                data: (isBackground ? el.dataset.bgSrc : el.getAttribute('src')).split(',')[1],
-                alt_data: altData,
-                mimetype: (isBackground ? el.dataset.mimetype : el.getAttribute('src').split(":")[1].split(";")[0]),
-                name: (el.dataset.fileName ? el.dataset.fileName : null),
-            },
-        );
+        let attachmentNotFound = false;
+        try {
+            newAttachmentSrc = await this._serviceRpc(
+                `/web_editor/modify_image/${encodeURIComponent(el.dataset.originalId)}`,
+                {
+                    res_model: resModel,
+                    res_id: parseInt(resId),
+                    data: (isBackground ? el.dataset.bgSrc : el.getAttribute('src')).split(',')[1],
+                    alt_data: altData,
+                    mimetype: (isBackground ? el.dataset.mimetype : el.getAttribute('src').split(":")[1].split(";")[0]),
+                    name: (el.dataset.fileName ? el.dataset.fileName : null),
+                },
+            );
+        } catch {
+            // On RPC failure, set a placeholder image source with a flag.
+            newAttachmentSrc = "/html_editor/static/src/img/placeholder_thumbnail.png";
+            attachmentNotFound = true;
+        }
         el.classList.remove('o_modified_image_to_save');
         if (isBackground) {
             const parts = weUtils.backgroundImageCssToParts($(el).css('background-image'));
@@ -3706,9 +3747,16 @@ export class Wysiwyg extends Component {
             $(el).css('background-image', combined);
             delete el.dataset.bgSrc;
         } else {
-            el.setAttribute('src', newAttachmentSrc);
+            let targetEl = el;
+            if (attachmentNotFound) {
+                // Reset image to a clean state if a placeholder is returned.
+                targetEl = document.createElement("img");
+                el.insertAdjacentElement("afterend", targetEl);
+                el.remove();
+            }
+            targetEl.src = newAttachmentSrc;
             // Also update carousel thumbnail.
-            weUtils.forwardToThumbnail(el);
+            weUtils.forwardToThumbnail(targetEl);
         }
     }
 

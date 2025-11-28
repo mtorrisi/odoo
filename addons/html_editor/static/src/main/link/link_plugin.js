@@ -101,7 +101,7 @@ async function fetchInternalMetaData(url) {
             const html_parser = new window.DOMParser();
             const doc = html_parser.parseFromString(content, "text/html");
             const internalUrlMetaData = await rpc("/html_editor/link_preview_internal", {
-                preview_url: urlParsed.pathname,
+                preview_url: urlParsed.href,
             });
 
             internalUrlMetaData["favicon"] = doc.querySelector("link[rel~='icon']");
@@ -154,6 +154,7 @@ export class LinkPlugin extends Plugin {
         "overlay",
         "color",
         "feff",
+        "linkSelection",
     ];
     // @phoenix @todo: do we want to have createLink and insertLink methods in link plugin?
     static shared = ["createLink", "insertLink", "getPathAsUrlCommand"];
@@ -242,6 +243,7 @@ export class LinkPlugin extends Plugin {
         /** Overrides */
         split_element_block_overrides: this.handleSplitBlock.bind(this),
         insert_line_break_element_overrides: this.handleInsertLineBreak.bind(this),
+        delete_image_overrides: this.deleteImageLink.bind(this),
     };
     setup() {
         this.overlay = this.dependencies.overlay.createOverlay(LinkPopover, {}, { sequence: 50 });
@@ -283,6 +285,7 @@ export class LinkPlugin extends Plugin {
         this.getAttachmentMetadata = memoize((url) =>
             fetchAttachmentMetaData(url, this.services.orm)
         );
+        this.LinkPopoverState = { editing: false };
     }
 
     destroy() {
@@ -378,6 +381,14 @@ export class LinkPlugin extends Plugin {
                 anchorEl.appendChild(newFont);
                 this.dependencies.color.colorElement(newFont, color, "color");
             }
+
+            // When a link contains unsupported element (like an iframe or a link),
+            // we remove the link. Cases can happen when a image link is replaced
+            // by a document or a video
+            const hasUnsupportedMedia = anchorEl.querySelector("a, iframe");
+            if (hasUnsupportedMedia) {
+                this.removeLink(anchorEl);
+            }
         }
     }
 
@@ -394,12 +405,14 @@ export class LinkPlugin extends Plugin {
             },
             onClose: () => {
                 this.overlay.close();
+                this.removeCurrentLinkIfEmtpy();
             },
             getInternalMetaData: this.getInternalMetaData,
             getExternalMetaData: this.getExternalMetaData,
             getAttachmentMetadata: this.getAttachmentMetadata,
             recordInfo: this.config.getRecordInfo?.() || {},
             type: this.type || "",
+            LinkPopoverState: this.LinkPopoverState,
         };
         if (
             this._isNavigatingByMouse &&
@@ -447,17 +460,18 @@ export class LinkPlugin extends Plugin {
             // note that data-prevent-closing-overlay also used in color picker but link popover
             // and color picker don't open at the same time so it's ok to query like this
             const popoverEl = document.querySelector("[data-prevent-closing-overlay=true]");
-            if (popoverEl?.contains(selectionData.documentSelection?.anchorNode)) {
+            if (popoverEl && (!selectionData.documentSelection || popoverEl.contains(selectionData.documentSelection.anchorNode))) {
                 return;
             }
             this.overlay.close();
         } else if (!selection.isCollapsed) {
-            const selectedNodes = this.dependencies.selection.getSelectedNodes();
-            const imageNode = selectedNodes.find((node) => node.tagName === "IMG");
+            const targetedNodes = this.dependencies.selection.getTargetedNodes();
+            const imageNode = targetedNodes.find((node) => node.tagName === "IMG");
             if (imageNode && imageNode.parentNode.tagName === "A") {
                 if (this.linkElement !== imageNode.parentElement) {
                     this.overlay.close();
                     this.removeCurrentLinkIfEmtpy();
+                    this.LinkPopoverState.editing = false;
                 }
                 this.linkElement = imageNode.parentElement;
 
@@ -470,6 +484,7 @@ export class LinkPlugin extends Plugin {
                         this.dependencies.selection.setCursorEnd(this.linkElement);
                         this.dependencies.selection.focusEditable();
                         this.removeCurrentLinkIfEmtpy();
+                        this.LinkPopoverState.editing = false;
                         this.dependencies.history.addStep();
                     },
                 };
@@ -477,6 +492,9 @@ export class LinkPlugin extends Plugin {
                 // close the overlay to always position the popover to the bottom of selected image
                 if (this.overlay.isOpen) {
                     this.overlay.close();
+                }
+                if (!this.linkElement.href) {
+                    this.LinkPopoverState.editing = true;
                 }
                 this.overlay.open({ target: imageNode, props: imageLinkProps });
             } else {
@@ -493,6 +511,11 @@ export class LinkPlugin extends Plugin {
                 this.removeCurrentLinkIfEmtpy();
                 this.overlay.close();
                 this.linkElement = linkEl;
+                this.LinkPopoverState.editing = false;
+            }
+
+            if (this.linkElement && this.linkElement.classList.contains("o_link_in_selection")) {
+                this.dependencies.linkSelection.padLinkWithZwnbsp(this.linkElement);
             }
 
             // if the link includes an inline image, we close the previous opened popover to reposition it
@@ -507,9 +530,15 @@ export class LinkPlugin extends Plugin {
                     ...props,
                     isImage: false,
                     linkEl: this.linkElement,
-                    onApply: (url, label, classes) => {
+                    onApply: (url, label, classes, attachmentId) => {
                         this.linkElement.href = url;
-                        if (cleanZWChars(this.linkElement.innerText) === label) {
+                        if (attachmentId) {
+                            this.linkElement.dataset.attachmentId = attachmentId;
+                        }
+                        if (
+                            cleanZWChars(this.linkElement.innerText) === label ||
+                            !!this.linkElement.childElementCount
+                        ) {
                             this.overlay.close();
                             this.dependencies.selection.setSelection(
                                 this.dependencies.selection.getEditableSelection()
@@ -529,12 +558,16 @@ export class LinkPlugin extends Plugin {
                         cleanTrailingBR(closestBlock(this.linkElement));
                         this.dependencies.selection.focusEditable();
                         this.removeCurrentLinkIfEmtpy();
+                        this.LinkPopoverState.editing = false;
                         this.dependencies.history.addStep();
                     },
                     canEdit: !this.linkElement.classList.contains("o_link_readonly"),
                     canUpload: !this.config.disableFile,
                     onUpload: this.config.onAttachmentChange,
                 };
+                if (!this.linkElement.href) {
+                    this.LinkPopoverState.editing = true;
+                }
                 // pass the link element to overlay to prevent position change
                 this.overlay.open({ target: this.linkElement, props: linkProps });
             }
@@ -555,14 +588,14 @@ export class LinkPlugin extends Plugin {
                 !linkElement.contains(selection.focusNode)
             ) {
                 this.dependencies.split.splitSelection();
-                const selectedNodes = this.dependencies.selection.getSelectedNodes();
+                const targetedNodes = this.dependencies.selection.getTargetedNodes();
                 let before = linkElement.previousSibling;
-                while (before !== null && selectedNodes.includes(before)) {
+                while (before !== null && targetedNodes.includes(before)) {
                     linkElement.insertBefore(before, linkElement.firstChild);
                     before = linkElement.previousSibling;
                 }
                 let after = linkElement.nextSibling;
-                while (after !== null && selectedNodes.includes(after)) {
+                while (after !== null && targetedNodes.includes(after)) {
                     linkElement.appendChild(after);
                     after = linkElement.nextSibling;
                 }
@@ -572,8 +605,9 @@ export class LinkPlugin extends Plugin {
             return linkElement;
         } else {
             // create a new link element
-            const selectedNodes = this.dependencies.selection.getSelectedNodes();
-            const imageNode = selectedNodes.find((node) => node.tagName === "IMG");
+            this.LinkPopoverState.editing = true;
+            const targetedNodes = this.dependencies.selection.getTargetedNodes();
+            const imageNode = targetedNodes.find((node) => node.tagName === "IMG");
 
             const link = this.document.createElement("a");
             if (!selection.isCollapsed) {
@@ -619,8 +653,7 @@ export class LinkPlugin extends Plugin {
     /**
      * Remove the link from the collapsed selection
      */
-    removeLink() {
-        const link = this.linkElement;
+    removeLink(link = this.linkElement) {
         const cursors = this.dependencies.selection.preserveSelection();
         if (link && link.isContentEditable) {
             cursors.update(callbacksForCursorUpdate.unwrap(link));
@@ -660,8 +693,8 @@ export class LinkPlugin extends Plugin {
             this.dependencies.selection.getEditableSelection());
         cursors = this.dependencies.selection.preserveSelection();
         // to remove link from selected images
-        const selectedNodes = this.dependencies.selection.getSelectedNodes();
-        const selectedImageNodes = selectedNodes.filter((node) => node.tagName === "IMG");
+        let targetedNodes = this.dependencies.selection.getTargetedNodes();
+        const selectedImageNodes = targetedNodes.filter((node) => node.tagName === "IMG");
         if (selectedImageNodes.length && startLink && endLink && startLink === endLink) {
             for (const imageNode of selectedImageNodes) {
                 let imageLink;
@@ -682,7 +715,7 @@ export class LinkPlugin extends Plugin {
             // when only unlink an inline image, add step after the unwrapping
             if (
                 selectedImageNodes.length === 1 &&
-                selectedImageNodes.length === selectedNodes.length
+                selectedImageNodes.length === targetedNodes.length
             ) {
                 this.dependencies.history.addStep();
                 return;
@@ -707,7 +740,7 @@ export class LinkPlugin extends Plugin {
                 { normalize: true }
             );
         }
-        const targetedNodes = this.dependencies.selection.getSelectedNodes();
+        targetedNodes = this.dependencies.selection.getTargetedNodes();
         const links = new Set(
             targetedNodes
                 .map((node) => closestElement(node, "a"))
@@ -819,6 +852,18 @@ export class LinkPlugin extends Plugin {
     onPasteNormalizeLink() {
         this.updateCurrentLinkSyncState();
         this.onInputDeleteNormalizeLink();
+    }
+
+    deleteImageLink(imageToDelete) {
+        if (imageToDelete.parentElement.tagName === "A") {
+            // If the link is empty after removing the image, remove it.
+            imageToDelete.remove();
+            this.overlay.close();
+            this.removeCurrentLinkIfEmtpy();
+            this.dependencies.history.addStep();
+            return true;
+        }
+        return false;
     }
 
     /**
